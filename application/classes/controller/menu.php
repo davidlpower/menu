@@ -6,7 +6,7 @@ class Controller_Menu extends Controller
 
     public function action_index()
     {
-        $menuItems = ORM::factory('menu')->find_all(); // loads all menu object from table
+        $menuItems = ORM::factory('menu')->find_all(); // load all menu object from table
 
         $view = new View('menu/index');
         $view->set("menuItems", $menuItems); // set "menuItems" object to view
