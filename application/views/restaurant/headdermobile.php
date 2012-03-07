@@ -1,7 +1,7 @@
 <HTML>
 
 <HEAD>
-    <title>Menu Test Site :: Mobile</title>
+    <title>A little blog :: Mobile</title>
 <?php
     echo html::style("media/css/stylesheetM.css");
 ?>

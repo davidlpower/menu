@@ -1,7 +1,7 @@
 <HTML>
 
 <HEAD>
-    <title>Menu Test Site :: Styles</title>
+    <title>A little blog.</title>
 <?php
     echo html::style("media/css/stylesheet.css");
 ?>
