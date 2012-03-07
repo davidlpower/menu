@@ -9,6 +9,7 @@ class Controller_Restaurant extends Controller
     {
         if($this->session->id() != null){
             $this->session = Session::instance();
+            print_r("Done!");
         }
         session_start();
         $restaurantItems = ORM::factory('restaurant')->find_all(); // loads all restaurants from restauraunts table
@@ -71,5 +72,4 @@ class Controller_Restaurant extends Controller
         $this->request->redirect(self::INDEX_PAGE);
     }
 }
-
 ;
