@@ -9,7 +9,9 @@ class Controller_Restaurant extends Controller
     {
         if($this->session->id() != null){
             $this->session = Session::instance();
-            print_r("Done!");
+            print_r("if!");
+        }else{
+            print_r("else!");
         }
         session_start();
         $restaurantItems = ORM::factory('restaurant')->find_all(); // loads all restaurants from restauraunts table
