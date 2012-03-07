@@ -13,7 +13,7 @@ class Controller_Restaurant extends Controller
             Session::instance()->set('valid', TRUE);
             Session::instance()->set('name','David');
         }else{
-            //$var = $session->get('name');
+            $value = Session::instance()->get('name', NULL);
             print_r("Session Set");
             //print-r($var);
         }
