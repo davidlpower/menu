@@ -10,10 +10,6 @@ class Controller_Restaurant extends Controller
         if (Session::instance()->get('valid') === NULL)
         {
             print_r("if!");
-        }
-        if($this->session->id() != null){
-            $this->session = Session::instance();
-            print_r("if!");
         }else{
             print_r("else!");
         }
