@@ -15,7 +15,7 @@ class Controller_Restaurant extends Controller
         }else{
             $value = Session::instance()->get('name', NULL);
             print_r("Session Set");
-            //print-r($var);
+            print_r($value);
         }
         $restaurantItems = ORM::factory('restaurant')->find_all(); // loads all restaurants from restauraunts table
         //Populate the browser var with the mobile device type
