@@ -13,7 +13,6 @@ class Controller_Restaurant extends Controller
         }else{
             print_r("else!");
         }
-        session_start();
         $restaurantItems = ORM::factory('restaurant')->find_all(); // loads all restaurants from restauraunts table
         //Populate the browser var with the mobile device type
         $browser = Request::user_agent('mobile');
