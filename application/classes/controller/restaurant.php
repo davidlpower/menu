@@ -7,6 +7,10 @@ class Controller_Restaurant extends Controller
 // Load restaurant information and send it to restaurant view
     public function action_restaurant()
     {
+        if (Session::instance()->get('valid') === NULL)
+        {
+            print_r("if!");
+        }
         if($this->session->id() != null){
             $this->session = Session::instance();
             print_r("if!");
