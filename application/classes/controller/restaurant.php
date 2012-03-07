@@ -10,7 +10,7 @@ class Controller_Restaurant extends Controller
         if (Session::instance()->get('valid') === NULL)
         {
             print_r("No Session Set");
-            Session::instance();
+            Session::instance()->set('valid', TRUE);
         }else{
             print_r("Session Set");
         }
