@@ -14,7 +14,7 @@ class Controller_Session extends Controller
     }
     
     public function action_setVar(){   
-        Session::instance()->set('No',$this->request->param('id'));  
+        Session::instance()->set('No',$this->request->param('no'));  
     }
     
     public function action_getVar(){   
