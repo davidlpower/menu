@@ -21,7 +21,7 @@ class Controller_Session extends Controller
     //Display set value
     public function action_getVar(){   
         $value = Session::instance()->get('No', NULL);  
-        print_r("Value: ".$value);
+        print_r("Value: ".$value."\n session state".$sessionState);
     }
     
     //Delete current session
