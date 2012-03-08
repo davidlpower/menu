@@ -19,6 +19,6 @@ class Controller_Session extends Controller
     
     public function action_getVar(){   
         $valu = Session::instance()->get('No', NULL);  
-        print_r("Valu: ".$valu);
+        print_r("Value: ".$valu);
     }
 } // End Session
