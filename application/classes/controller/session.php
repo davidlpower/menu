@@ -14,11 +14,11 @@ class Controller_Session extends Controller
     }
     
     public function action_setVar(){   
-        Session::instance()->set('No',$this->request->param('no'));  
+        Session::instance()->set('No',$this->request->param('id'));  
     }
     
     public function action_getVar(){   
         $valu = Session::instance()->get('No', NULL);  
-        print_r($valu);
+        print_r("Valu: ".$valu);
     }
 } // End Session
