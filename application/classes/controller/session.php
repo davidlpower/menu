@@ -12,13 +12,13 @@ class Controller_Session extends Controller
             $sessionState = TRUE;
         }
         
-        echo "<ul>
+        print_r("<ul>
             <li>setVar</li>
             <li>getVar</li>
             <li>deleteSession</li>
             <li>setSessionState</li>
             <li>getSessionState</li>
-            </ul>";
+            </ul>");
     }
     
     //Get a value and set in session
