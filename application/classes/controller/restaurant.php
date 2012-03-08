@@ -7,16 +7,6 @@ class Controller_Restaurant extends Controller
 // Load restaurant information and send it to restaurant view
     public function action_restaurant()
     {
-        if (Session::instance()->get('valid') === NULL)
-        {
-            print_r("No Session Set");
-            Session::instance()->set('valid', TRUE);
-            Session::instance()->set('name','David');
-        }else{
-            $value = Session::instance()->get('name', NULL);
-            print_r("Session Set");
-            print_r($value);
-        }
         $restaurantItems = ORM::factory('restaurant')->find_all(); // loads all restaurants from restauraunts table
         //Populate the browser var with the mobile device type
         $browser = Request::user_agent('mobile');
