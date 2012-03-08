@@ -2,7 +2,7 @@
 
 class Controller_Session extends Controller
 {
-    public $sessionState = TRUE;
+    public $sessionState;
 
     public function action_createSession()
     {
@@ -13,12 +13,21 @@ class Controller_Session extends Controller
         }
     }
     
+    //Get a value and set in session
     public function action_setVar(){   
         Session::instance()->set('No',$this->request->param('id'));  
     }
     
+    //Display set value
     public function action_getVar(){   
-        $valu = Session::instance()->get('No', NULL);  
-        print_r("Value: ".$valu);
+        $value = Session::instance()->get('No', NULL);  
+        print_r("Value: ".$value);
     }
+    
+    //Delete current session
+    public function action_deleteSession(){
+        Session::instance()->destroy();
+        $sessionState = FALSE;
+    }
+    
 } // End Session
