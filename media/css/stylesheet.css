@@ -10,6 +10,12 @@
     background: #ddddff;
     border: 1px dashed #666;
 }
+
+.centerTitle{
+    text-align: center;
+}
+
+
 #menuBar{
     background: #fddddd;
     border-top: 1px dashed #666;
