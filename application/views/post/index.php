@@ -8,7 +8,7 @@
     <div id="title">
 
         <div class="centerTitle">
-            <h1>Exposition</h1>
+            <h1>Software, Electronics, Music and all-round Geekery</h1>
         </div>
 
         <!--Display new menu-->
