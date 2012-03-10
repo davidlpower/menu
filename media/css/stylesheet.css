@@ -8,7 +8,7 @@
 }
 
 #title{
-    background: #FaF9Fa;
+    background: #F1FCF1;
     border: 1px dashed #666;
     font-family: 'Shadows Into Light Two', cursive;
     
@@ -19,7 +19,7 @@
     border-top: 1px dashed #666;
 }
 .menuItem{
-    background-color: #AFAFAF;
+    background-color: #FFF1F0;
     margin: 0px 2px 0px 2px;
 }
 
