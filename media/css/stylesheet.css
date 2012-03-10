@@ -1,6 +1,5 @@
 body{
-    background-image:url('media/images/tile.png');
-    background-repeat:repeat;
+    background-image: url('media/images/tile.png') repeat;
 }
 
 #container{
