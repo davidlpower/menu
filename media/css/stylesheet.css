@@ -4,12 +4,14 @@
     padding: 20px;
     border: 1px solid #666;
     background: #ffffff;
-    font-family: 'PT Mono', sans-serif;
+    font-family: 'Exo', 'PT Mono', sans-serif;
 }
 
 #title{
     background: #6CB726;
     border: 1px dashed #666;
+    font-family: 'Prosto One', cursive;
+    
 }
 
 .centerTitle{
