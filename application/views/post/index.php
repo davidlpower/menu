@@ -25,8 +25,9 @@
 
         <h2><?php echo $post->title; ?></h2>
         <pre><?php echo $post->content; ?></pre>
-        <div class="button"><?php echo HTML::anchor("post/edit/" . $post->id, "Edit"); ?></div>
-        <div class="button"><?php echo HTML::anchor("post/delete/" . $post->id, "Delete"); ?></div>
+        <?php echo HTML::anchor("post/edit/" . $post->id, "Edit"); ?>
+        <?php echo "  "; ?>
+        <?php echo HTML::anchor("post/delete/" . $post->id, "Delete"); ?>
 
     </div>
 
