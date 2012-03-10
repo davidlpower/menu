@@ -14,21 +14,19 @@
         <!--Display new menu-->
         <div id="menuBar">
             <!-- Add a link to the home page. -->
-            <?php echo HTML::anchor("menu/new", "New Menu Item"); ?>
-            |
-            <?php echo HTML::anchor("restaurant/restaurant", "View Restaurants"); ?>
+            <?php echo HTML::anchor("home/new", "New post"); ?>
         </div>
 
     </div>
 
-    <?php foreach ($menuItems as $menu) : ?>
+    <?php foreach ($postItems as $post) : ?>
 
     <div class="menuItem">
 
-        <h2><?php echo $menu->title; ?></h2>
-        <pre><?php echo $menu->content; ?></pre>
-        <?php echo HTML::anchor("menu/edit/" . $menu->id, "Edit"); ?>
-        <?php echo HTML::anchor("menu/delete/" . $menu->id, "Delete"); ?>
+        <h2><?php echo $post->title; ?></h2>
+        <pre><?php echo $post->content; ?></pre>
+        <?php echo HTML::anchor("home/edit/" . $post->id, "Edit"); ?>
+        <?php echo HTML::anchor("home/delete/" . $post->id, "Delete"); ?>
 
     </div>
 

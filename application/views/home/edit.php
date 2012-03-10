@@ -2,6 +2,7 @@
 defined('SYSPATH') or die('No direct script access.');
 include 'headder.php';
 ?>
+
 <div id="container">
     <div id="title">
         <h1>Create new menu item</h1>
@@ -21,6 +22,7 @@ include 'headder.php';
     <?php echo Form::submit("submit", "Submit"); ?>
     <?php echo Form::close(); ?>
 </div>
+
 <?php
 include 'footer.php';
 ?>
