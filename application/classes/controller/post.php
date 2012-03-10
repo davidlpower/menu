@@ -22,7 +22,7 @@ class Controller_Post extends Controller
         }
         */
         $view = new View('post/index');
-        $view->set("postItems", $postItems); // set "menuItems" object to view
+        $view->set("postItems", $postItems); // set "postItems" object to view
 
         $this->response->body($view);
     }
@@ -32,8 +32,8 @@ class Controller_Post extends Controller
     {
         $post = new Model_Post();
 
-        $view = new View('menu/edit'); // Load the edit view and
-        $view->set("menu", $post); // assign the Model_Post model to it
+        $view = new View('post/edit'); // Load the edit view and
+        $view->set("post", $post); // assign the Model_Post model to it
 
         $this->response->body($view);
     }
@@ -44,24 +44,24 @@ class Controller_Post extends Controller
         $post_id = $this->request->param('id');
         $post = new Model_Post($post_id);
         $post->values($_POST); // populate $post object from $_POST array
-        $post->save(); // saves menu to database
+        $post->save(); // saves post to database
 
-        $this->request->redirect('index.php/menu'); // redirects to menu page after saving
+        $this->request->redirect('index.php/post'); // redirects to post page after saving
     }
 
-    // edit the menu items
+    // edit the post items
     public function action_edit()
     {
         $post_id = $this->request->param('id');
         $post = new Model_Post($post_id);
 
-        $view = new View('menu/edit');
-        $view->set("menu", $post);
+        $view = new View('post/edit');
+        $view->set("post", $post);
 
         $this->response->body($view);
     }
 
-    // delete the menu item
+    // delete the post item
     public function action_delete()
     {
         $post_id = $this->request->param('id');
@@ -70,4 +70,4 @@ class Controller_Post extends Controller
         $post->delete(); // delete in database
         $this->request->redirect(self::INDEX_PAGE);
     }
-} // End Menu
+} // End Post

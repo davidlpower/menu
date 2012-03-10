@@ -13,8 +13,8 @@
 
         <!--Display new menu-->
         <div id="menuBar">
-            <!-- Add a link to the home page. -->
-            <?php echo HTML::anchor("home/new", "New post"); ?>
+            <!-- Add a link to the post page. -->
+            <?php echo HTML::anchor("post/new", "New post"); ?>
         </div>
 
     </div>
@@ -25,8 +25,8 @@
 
         <h2><?php echo $post->title; ?></h2>
         <pre><?php echo $post->content; ?></pre>
-        <?php echo HTML::anchor("home/edit/" . $post->id, "Edit"); ?>
-        <?php echo HTML::anchor("home/delete/" . $post->id, "Delete"); ?>
+        <?php echo HTML::anchor("post/edit/" . $post->id, "Edit"); ?>
+        <?php echo HTML::anchor("post/delete/" . $post->id, "Delete"); ?>
 
     </div>
 
