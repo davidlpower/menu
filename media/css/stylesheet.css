@@ -8,7 +8,7 @@ body{
     padding: 20px;
     border: 1px solid #666;
     background: #EEEEE0;
-    font-family: 'Exo', 'PT Mono', sans-serif;
+    font-family: 'Exo', sans-serif;
 }
 
 #title{
@@ -17,12 +17,6 @@ body{
     font-family: 'Shadows Into Light Two', cursive;
     
 }
-
-.centerTitle{
-    font-size: medium;
-    text-align:center;
-}
-
 
 #menuBar{
     background: #6CB726;
@@ -35,5 +29,10 @@ body{
 
 .footer{
     font-size: small;
+    text-align:center;
+}
+
+.centerTitle{
+    font-size: medium;
     text-align:center;
 }
