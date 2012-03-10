@@ -3,23 +3,23 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #666;
-    background: #EEEEE0;
+    background: #FFFFFF;
     font-family: 'Exo', sans-serif;
 }
 
 #title{
-    background: #59FF59;
+    background: #F0F0F0;
     border: 1px dashed #666;
     font-family: 'Shadows Into Light Two', cursive;
     
 }
 
 #menuBar{
-    background: #6CB726;
+    background: #F9F9F9;
     border-top: 1px dashed #666;
 }
 .menuItem{
-    background-color: #C0C0C0;
+    background-color: #FFFFFF;
     margin: 0px 2px 0px 2px;
 }
 
