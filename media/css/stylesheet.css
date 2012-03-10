@@ -23,6 +23,8 @@
     margin: 0px 2px 0px 2px;
     width: 90%;
     margin: auto;
+    padding: 20px;
+    white-space:normal; 
 }
 
 .footer{
