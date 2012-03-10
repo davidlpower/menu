@@ -24,7 +24,7 @@
     <div class="menuItem">
 
         <h2><?php echo $post->title; ?></h2>
-        <pre><?php echo $post->content; ?></pre>
+        <?php echo $post->content; ?>
         <?php echo HTML::anchor("post/edit/" . $post->id, "Edit"); ?>
         <?php echo "  "; ?>
         <?php echo HTML::anchor("post/delete/" . $post->id, "Delete"); ?>
