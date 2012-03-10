@@ -1,3 +1,7 @@
+body{
+    background: #F5F5F5;
+}
+
 #container{
     width: 80%;
     margin: auto;
@@ -10,7 +14,7 @@
 #title{
     background: #59FF59;
     border: 1px dashed #666;
-    font-family: 'Prosto One', cursive;
+    font-family: 'PT Mono', cursive;
     
 }
 

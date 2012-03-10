@@ -5,7 +5,6 @@
 <?php
     echo html::style("media/css/stylesheet.css");
     echo html::style("<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>");
-    echo html::style("<link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>");
     echo html::style("<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>");
 ?>
     </HEAD>
