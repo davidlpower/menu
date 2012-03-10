@@ -1,5 +1,6 @@
 body{
     background-image:url('media/images/tile.png');
+    background-repeat:repeat;
 }
 
 #container{
