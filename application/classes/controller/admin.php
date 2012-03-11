@@ -7,7 +7,7 @@ class Controller_Admin extends Controller_Temp
 
     public function action_index()
     {
-        $postItems = ORM::factory('post')->find_all(); // load all post object from table
+        $adminItems = ORM::factory('admin')->find_all(); // load all admin object from table
         
         //detect device
         $browser = Request::user_agent('mobile');
@@ -22,50 +22,50 @@ class Controller_Admin extends Controller_Temp
         
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
         $this->template->title = View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('post/index');
-        $this->template->postItems = View::bind_global('postItems',$postItems);
+        $this->template->content = View::factory('admin/index');
+        $this->template->adminItems = View::bind_global('adminItems',$adminItems);
     }
 
     // loads the new article form
     public function action_new()
     {
-        $post = new Model_Post();
+        $admin = new Model_admin();
         
         $aTitle = 'Edit or Post something new!';
         $this->template->title = View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('post/edit');
-        $this->template->post = View::bind_global('post',$post);
+        $this->template->content = View::factory('admin/edit');
+        $this->template->admin = View::bind_global('admin',$admin);
     }
 
     // save the article
     public function action_post()
     {
-        $post_id = $this->request->param('id');
-        $post = new Model_Post($post_id);
-        $post->values($_POST); // populate $post object from $_POST array
-        $post->save(); // saves post to database
+        $admin_id = $this->request->param('id');
+        $admin = new Model_admin($admin_id);
+        $admin->values($_admin); // populate $admin object from $_admin array
+        $admin->save(); // saves admin to database
 
-        $this->request->redirect('/post'); // redirects to post page after saving
+        $this->request->redirect('/admin'); // redirects to admin page after saving
     }
 
-    // edit the post items
+    // edit the admin items
     public function action_edit()
     {
-        $post_id = $this->request->param('id');
-        $post = new Model_Post($post_id);
-        $aTitle = 'Edit that post!';
+        $admin_id = $this->request->param('id');
+        $admin = new Model_admin($admin_id);
+        $aTitle = 'Edit that admin!';
         $this->template->title = View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('post/edit');
-        $this->template->post = View::bind_global('post',$post);
+        $this->template->content = View::factory('admin/edit');
+        $this->template->admin = View::bind_global('admin',$admin);
     }
 
     // delete the post item
     public function action_delete()
     {
-        $post_id = $this->request->param('id');
-        $post = new Model_Post($post_id);
+        $admin_id = $this->request->param('id');
+        $admin = new Model_admin($admin_id);
 
-        $post->delete(); // delete in database
+        $admin->delete(); // delete in database
         $this->request->redirect(self::INDEX_PAGE);
     }
-} // End Post
+} // End admin
