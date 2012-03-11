@@ -25,7 +25,7 @@ tinyMCE.init({
     <br/>
     <?php echo Form::label("content", "Content"); ?>
     <br/>
-    <?php echo Form::textarea("content", $post->content, $settings=array("style='WIDTH: 400px; HEIGHT: 250px'")); ?>
+    <?php echo Form::textarea("content", $post->content, $settings=array("style='WIDTH: 600px; HEIGHT: 400px'")); ?>
     <br/>
     <br/>
     <?php echo Form::submit("submit", "Submit"); ?>
