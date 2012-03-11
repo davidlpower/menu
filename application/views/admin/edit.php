@@ -20,7 +20,7 @@ tinyMCE.init({
     <?php echo Form::open('admin/post/' . $post->id); ?>
     <?php echo Form::label("title", "Title"); ?>
     <br/>
-    <?php echo Form::input("title", $post->title, $settings=array("size='100'","style='width:100px; height:40px;'")); ?>
+    <?php echo Form::input("title", $post->title, $settings=array("size='100'","style='height:35px; font-size: large;'")); ?>
     <br/>
     <br/>
     <?php echo Form::label("content", "Content"); ?>
