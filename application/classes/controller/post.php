@@ -7,20 +7,18 @@ class Controller_Post extends Controller_Temp
     public function action_index()
     {
         $postItems = ORM::factory('post')->find_all(); // load all post object from table
-
-        /* detect device
+        $mobileDevice = null;
+        //detect device
         $browser = Request::user_agent('mobile');
         //http://kohanaframework.org/3.0/guide/api/Request - UserAgent Detection Here
 
         //If $browser is not null then device is mobile
         if ($browser != null) {
-            $view = new View('restaurant/mobileRestaurant');
-            $view->set("restaurantItems", $restaurantItems); // set/send "restaurantItems" object to view
+            $mobileDevice = "This is a mobile device";
         } else {
-            $view = new View('restaurant/restaurant');
-            $view->set("restaurantItems", $restaurantItems); // set/send "restaurantItems" object to view
+            $mobileDevice = "This is not a mobile device";
         }
-        */
+        
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
         $this->template->title = View::bind_global('title', $aTitle);
         $this->template->content = View::factory('post/index');
@@ -31,11 +29,10 @@ class Controller_Post extends Controller_Temp
     public function action_new()
     {
         $post = new Model_Post();
-
-        $view = new View('post/edit'); // Load the edit view and
-        $view->set("post", $post); // assign the Model_Post model to it
-
-        $this->response->body($view);
+        
+        $aTitle = 'Edit or Post something new!';
+        $this->template->title = View::bind_global('title', $aTitle);
+        $this->template->content = View::factory('post/edit');
     }
 
     // save the article
