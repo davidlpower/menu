@@ -24,7 +24,7 @@ class Controller_Post extends Controller_Temp
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
         $this->template->title = View::bind_global('title', $aTitle);
         $this->template->content = View::factory('post/index');
-        $this->template->postItems = $postItems;
+        $this->template->postItems = View::bind_global('postItems',$postItems);
     }
 
     // loads the new article form
