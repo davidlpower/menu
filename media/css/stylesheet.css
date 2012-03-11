@@ -2,21 +2,21 @@
     width: 80%;
     margin: auto;
     padding: 20px;
-    border: 2px dashed #999999;
+    border: 1px dashed #999999;
     background: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
 }
 
 #title{
     background: #ECFFD2;
-    border: 2px dashed #999999;
+    border: 1px dashed #999999;
     font-family: 'Open Sans', sans-serif;
     
 }
 
 #menuBar{
     background: #F0F0F0;
-    border-top: 2px dashed #999999;
+    border-top: 1px dashed #999999;
 }
 .menuItem{
     background-color: #E8F9FF;
