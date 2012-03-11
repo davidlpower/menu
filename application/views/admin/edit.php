@@ -13,7 +13,7 @@ tinyMCE.init({
         <div class="centerTitle">
             <h1><?php echo($title) ?></h1>
         </div>
-        <?php include '/application/views/template/menuBar.php';?>
+        <?php include 'application/views/template/menuBar.php';?>
         </div>
         <br/>
         <?php echo Form::open('admin/post/' . $post->id); ?>
