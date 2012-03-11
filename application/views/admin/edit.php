@@ -25,7 +25,7 @@ tinyMCE.init({
     <br/>
     <?php echo Form::label("content", "Content"); ?>
     <br/>
-    <?php echo Form::textarea("content", $post->content, $settings=array("cols='100'","rows='40'")); ?>
+    <?php echo Form::textarea("content", $post->content, $settings=array("size='100'","cols='100'","rows='40'")); ?>
     <br/>
     <br/>
     <?php echo Form::submit("submit", "Submit"); ?>
