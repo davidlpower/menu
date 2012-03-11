@@ -10,6 +10,8 @@
         <div id="menuBar">
             <div class="centerTitle">
                 <!-- Add a link to the post page. -->
+                <?php echo HTML::anchor("admin/new", "New Post"); ?>
+                <?php echo " | " ?>
                 <?php echo HTML::anchor("admin/", "Software"); ?>
                 <?php echo " | " ?>
                 <?php echo HTML::anchor("admin/", "Electronics"); ?>
