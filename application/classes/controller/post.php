@@ -3,11 +3,12 @@
 class Controller_Post extends Controller_Temp
 {
     const INDEX_PAGE = '/post';
+    public $mobileDevice = null;
 
     public function action_index()
     {
         $postItems = ORM::factory('post')->find_all(); // load all post object from table
-        $mobileDevice = null;
+        
         //detect device
         $browser = Request::user_agent('mobile');
         //http://kohanaframework.org/3.0/guide/api/Request - UserAgent Detection Here
@@ -52,11 +53,10 @@ class Controller_Post extends Controller_Temp
     {
         $post_id = $this->request->param('id');
         $post = new Model_Post($post_id);
-
-        $view = new View('post/edit');
-        $view->set("post", $post);
-
-        $this->response->body($view);
+        $aTitle = 'Edit that post!';
+        $this->template->title = View::bind_global('title', $aTitle);
+        $this->template->content = View::factory('post/edit');
+        $this->template->post = View::bind_global('post',$post);
     }
 
     // delete the post item
