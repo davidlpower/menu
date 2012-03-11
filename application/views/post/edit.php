@@ -2,6 +2,13 @@
 defined('SYSPATH') or die('No direct script access.');
 include 'headder.php';
 ?>
+<script type="text/javascript" src="../jscripts/tiny_mce/tiny_mce.js"></script>
+
+<script type="text/javascript">
+tinyMCE.init({
+        mode : "textareas"
+});
+</script>
 
 <div id="container">
     <div id="title">
