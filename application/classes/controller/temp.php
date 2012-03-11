@@ -3,7 +3,7 @@
   class Controller_Temp extends Controller_Template 
   {
   
-      public $template = 'demo/template';
+      public $template = 'template/template';
   
       /**
        * The before() method is called before your controller action.
