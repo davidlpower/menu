@@ -3,7 +3,7 @@
     <div id="title">
 
         <div class="centerTitle">
-            <h1>Software, Electronics, Music and all-round Geekery</h1>
+            <h1><?php echo($title) ?></h1>
         </div>
 
         <!--Display new menu-->
