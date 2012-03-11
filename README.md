@@ -1,5 +1,12 @@
-# Kohana PHP Framework, version 3.2 (development)
+#Simple Bloggie v0.1#
 
-This is the current development version of [Kohana](http://kohanaframework.org/).
+A simple PHP based blogging engine. 
 
-For the most current release, see the 3.1/master branch.
+Provides admin access to blog posts 
+
+Coming soon:
+
+- Mobile agent based content 
+- Time stamps
+
+
