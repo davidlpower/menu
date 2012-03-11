@@ -17,6 +17,8 @@
                 <?php echo HTML::anchor("post/", "Music"); ?>
                 <?php echo " | " ?>
                 <?php echo HTML::anchor("post/", "Everything Else"); ?>
+                <?php echo " | " ?>
+                <?php echo HTML::anchor("post/", "Contact"); ?>
             </div>
         </div>
 
