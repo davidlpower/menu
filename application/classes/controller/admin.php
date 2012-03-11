@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Post extends Controller_Temp
+class Controller_Admin extends Controller_Temp
 {
     const INDEX_PAGE = '/admin';
     public $mobileDevice = null;
