@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Post extends Controller
+class Controller_Post extends Controller_Temp
 {
     const INDEX_PAGE = '/post';
 
@@ -21,10 +21,9 @@ class Controller_Post extends Controller
             $view->set("restaurantItems", $restaurantItems); // set/send "restaurantItems" object to view
         }
         */
-        $view = new View('post/index');
-        $view->set("postItems", $postItems); // set "postItems" object to view
-
-        $this->response->body($view);
+        
+        $this->template->content = View::factory('post/index');
+        $this->template->postItems = $postItems;
     }
 
     // loads the new article form

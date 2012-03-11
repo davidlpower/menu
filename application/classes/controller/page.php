@@ -13,4 +13,4 @@ class Controller_Page extends Controller_Temp {
         $this->template->title = __('Contact page');
   	$this->template->content = View::factory('post/contact' );
     }
-} 
+}

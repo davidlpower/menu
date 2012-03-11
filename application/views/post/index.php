@@ -1,8 +1,3 @@
-<?php
-    defined('SYSPATH') or die('No direct script access.');
-    include 'headder.php';
-?>
-
 <div id="container">
 
     <div id="title">
@@ -34,7 +29,3 @@
     <?php endforeach; ?>
 
 </div>
-
-<?php
-    include 'footer.php';
-?>
