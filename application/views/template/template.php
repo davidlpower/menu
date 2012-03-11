@@ -4,7 +4,6 @@
       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   
       <?php foreach ($styles as $file => $type) echo HTML::style($file, array('media' => $type)), "\n" ?>
-      <?php foreach ($scripts as $file) echo HTML::script($file), "\n" ?>
 
       <div id="fb-root"></div>
 <script>(function(d, s, id) {
