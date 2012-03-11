@@ -23,8 +23,6 @@ class Controller_Temp extends Controller_Template
             $this->template->content = '';
 
             $this->template->styles = array();
-            $this->template->scripts = array();
-
         }
     }
 
@@ -44,12 +42,8 @@ class Controller_Temp extends Controller_Template
                     'media/css/stylesheet.css' => 'screen',
             );
 
-            $scripts = array(
-                    '',
-            );
-
             $this->template->styles = array_merge( $this->template->styles, $styles );
-            $this->template->scripts = array_merge( $this->template->scripts, $scripts );
+            
     }
     parent::after();
     }
