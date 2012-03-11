@@ -55,7 +55,7 @@ class Controller_Admin extends Controller_Temp
         $post = new Model_post($post_id);
         $aTitle = 'Edit that post!';
         $this->template->title = View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('post/edit');
+        $this->template->content = View::factory('admin/edit');
         $this->template->post = View::bind_global('post',$post);
     }
 
