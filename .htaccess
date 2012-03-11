@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Installation directory
-RewriteBase /menu/
+RewriteBase /post/
 
 # Protect hidden files from being viewed
 <Files .*>
