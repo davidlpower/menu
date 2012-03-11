@@ -13,8 +13,8 @@ tinyMCE.init({
         <div class="centerTitle">
             <h1><?php echo($title) ?></h1>
         </div>
-        <?php include 'template/menuBar.php'; ?>
-        <?php include Kohana::find_file('views', 'menuBar.php');?>
+            <?php include Kohana::find_file('views', 'menuBar.php');?>
+            <?php include 'template/menuBar.php'; ?>
     </div>
         <br/>
         <?php echo Form::open('admin/post/' . $post->id); ?>
