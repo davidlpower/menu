@@ -34,6 +34,14 @@ tinyMCE.init({
     <?php echo Form::close(); ?>
 </div>
 
+
+<form method="post" action="show.php">
+        <p>     
+                <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea>
+                <input type="submit" value="Save" />
+        </p>
+</form>
+
 <?php
 include 'footer.php';
 ?>
