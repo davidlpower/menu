@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
   
-  class Controller_Page extends Controller_TempSite {
+  class Controller_Page extends Controller_Tempsite {
   
   	public function action_home()
   	{

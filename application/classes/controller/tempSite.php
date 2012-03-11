@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
   
-  class Controller_TempSite extends Controller_Template 
+  class Controller_Tempsite extends Controller_Template 
   {
   
       public $template = 'demo/template';
