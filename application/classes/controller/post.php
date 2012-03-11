@@ -33,6 +33,7 @@ class Controller_Post extends Controller_Temp
         $aTitle = 'Edit or Post something new!';
         $this->template->title = View::bind_global('title', $aTitle);
         $this->template->content = View::factory('post/edit');
+        $this->template->post = View::bind_global('post',$post);
     }
 
     // save the article
