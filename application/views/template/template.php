@@ -5,9 +5,14 @@
   
       <?php foreach ($styles as $file => $type) echo HTML::style($file, array('media' => $type)), "\n" ?>
       <?php foreach ($scripts as $file) echo HTML::script($file), "\n" ?>
-  
+
   </head>
+    
   <body>
     <?php echo $content ?>
-  </body>
+    <div class="footer">
+        &copy;David Power
+        <div class="fb-like" data-href="http://www.karujahundu.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="segoe ui"></div>
+    </div>
+  </body>  
 </html>
