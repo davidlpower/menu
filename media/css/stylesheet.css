@@ -9,14 +9,14 @@
 
 #title{
     background: #ECFFD2;
-    border: 5px dotted #999999;
+    border: 2px dashed #999999;
     font-family: 'Open Sans', sans-serif;
     
 }
 
 #menuBar{
     background: #F0F0F0;
-    border-top: 5px dotted #999999;
+    border-top: 2px dashed #999999;
 }
 .menuItem{
     background-color: #E8F9FF;
