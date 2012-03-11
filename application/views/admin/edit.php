@@ -17,7 +17,7 @@ tinyMCE.init({
         </div>
     </div>
     <br/>
-    <?php echo Form::open('post/post/' . $post->id); ?>
+    <?php echo Form::open('admin/post/' . $post->id); ?>
     <?php echo Form::label("title", "Title"); ?>
     <br/>
     <?php echo Form::input("title", $post->title); ?>
