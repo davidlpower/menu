@@ -6,7 +6,10 @@ include 'headder.php';
 <script type="text/javascript" src="/media/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript">
 tinyMCE.init({
-        mode : "textareas"
+        theme : "advanced",
+        mode : "textareas",
+        plugins : "fullpage",
+        theme_advanced_buttons3_add : "fullpage"
 });
 </script>
 
