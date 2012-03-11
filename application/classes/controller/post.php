@@ -46,7 +46,7 @@ class Controller_Post extends Controller
         $post->values($_POST); // populate $post object from $_POST array
         $post->save(); // saves post to database
 
-        $this->request->redirect('index.php/post'); // redirects to post page after saving
+        $this->request->redirect('/post'); // redirects to post page after saving
     }
 
     // edit the post items
