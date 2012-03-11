@@ -5,7 +5,9 @@ include 'headder.php';
 
 <div id="container">
     <div id="title">
-        <h1>Edit or Post new stuff!</h1>
+        <div class="centerTitle">
+            <h1>Edit or Post new stuff!</h1>
+        </div>
     </div>
     <br/>
     <?php echo Form::open('post/post/' . $post->id); ?>
