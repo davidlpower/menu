@@ -7,7 +7,7 @@ class Controller_Admin extends Controller_Temp
 
     public function action_index()
     {
-        $adminItems = ORM::factory('admin')->find_all(); // load all admin object from table
+        $postItems = ORM::factory('post')->find_all(); // load all admin object from table
         
         //detect device
         $browser = Request::user_agent('mobile');
@@ -23,7 +23,7 @@ class Controller_Admin extends Controller_Temp
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
         $this->template->title = View::bind_global('title', $aTitle);
         $this->template->content = View::factory('admin/index');
-        $this->template->adminItems = View::bind_global('adminItems',$adminItems);
+        $this->template->postItems = View::bind_global('postItems',$postItems);
     }
 
     // loads the new article form
