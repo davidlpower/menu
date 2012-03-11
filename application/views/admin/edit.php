@@ -18,11 +18,11 @@ tinyMCE.init({
         <?php echo Form::open('admin/post/' . $post->id); ?>
         <?php echo Form::label("title", "Title"); ?>
         <br/>
-        <?php echo Form::input("title", $post->title, $settings=array("size='80'","style='height:35px; font-size: large;'")); ?>
+        <?php echo Form::input("title", $post->title, $settings=array("style='height:35px; font-size: large;'")); ?>
         <br/>
         <br/>
         <?php echo Form::label("content", "Content"); ?>
-        <?php echo Form::textarea("content", $post->content, $settings=array("style='WIDTH: 750px; HEIGHT: 400px'")); ?>
+        <?php echo Form::textarea("content", $post->content, $settings=array("style='WIDTH: 50%; HEIGHT: 30%;'")); ?>
         <br/>
         <br/>
         <?php echo Form::submit("submit", "Submit"); ?>
