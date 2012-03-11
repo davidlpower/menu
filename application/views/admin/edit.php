@@ -18,12 +18,12 @@ tinyMCE.init({
     </div>
     <br/>
     <?php echo Form::open('admin/post/' . $post->id); ?>
-    <?php echo Form::label("title", "Title"); ?>
+    <?php echo Form::label("title", "Title", "size='50'"); ?>
     <br/>
     <?php echo Form::input("title", $post->title); ?>
     <br/>
     <br/>
-    <?php echo Form::label("content", "Content"); ?>
+    <?php echo Form::label("content", "Content", "cols='50' rows='10'"); ?>
     <br/>
     <?php echo Form::textarea("content", $post->content); ?>
     <br/>
