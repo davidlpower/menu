@@ -21,7 +21,7 @@ class Controller_Post extends Controller_Temp
             $view->set("restaurantItems", $restaurantItems); // set/send "restaurantItems" object to view
         }
         */
-        $aTitle =  __('Software, Electronics, Music and all-round Geekery');
+        $aTitle = 'Software, Electronics, Music and all-round Geekery';
         $this->template->title = View::factory($aTitle);
         $this->template->content = View::factory('post/index');
         $this->template->postItems = $postItems;
