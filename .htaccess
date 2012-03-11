@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Installation directory
-RewriteBase /index.php/
+RewriteBase /
 
 # Protect hidden files from being viewed
 <Files .*>
