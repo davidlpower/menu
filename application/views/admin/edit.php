@@ -22,7 +22,7 @@ tinyMCE.init({
         <br/>
         <br/>
         <?php echo Form::label("content", "Content"); ?>
-        <?php echo Form::textarea("content", $post->content, $settings=array("style='width: 80%;'")); ?>
+        <?php echo Form::textarea("content", $post->content, $settings=array("style='width: 80%; hight: 50%;'")); ?>
         <br/>
         <br/>
         <?php echo Form::submit("submit", "Submit"); ?>
