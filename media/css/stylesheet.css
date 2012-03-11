@@ -36,3 +36,7 @@
     font-size: medium;
     text-align:center;
 }
+
+.floatLeft{
+    float:left;
+}
