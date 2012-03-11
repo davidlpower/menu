@@ -11,7 +11,7 @@ tinyMCE.init({
 <div id="container">
     <div id="title">
         <div class="centerTitle">
-            <h1><?php echo($title) ?></h1>
+            <h1><?php include Kohana::find_file('template', 'menuBar');?></h1>
         </div>
         <?php include 'template/menuBar.php'; ?>
     </div>
