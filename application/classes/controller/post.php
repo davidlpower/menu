@@ -2,7 +2,7 @@
 
 class Controller_Post extends Controller
 {
-    const INDEX_PAGE = 'index.php/post';
+    const INDEX_PAGE = '/post';
 
     public function action_index()
     {
