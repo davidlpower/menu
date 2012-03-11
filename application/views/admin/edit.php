@@ -20,12 +20,12 @@ tinyMCE.init({
     <?php echo Form::open('admin/post/' . $post->id); ?>
     <?php echo Form::label("title", "Title"); ?>
     <br/>
-    <?php echo Form::input("title", $post->title, $settings=array("size='100'")); ?>
+    <?php echo Form::input("title", $post->title, $settings=array("size='100'","style='width:100px; height:40px;'")); ?>
     <br/>
     <br/>
     <?php echo Form::label("content", "Content"); ?>
     <br/>
-    <?php echo Form::textarea("content", $post->content, $settings=array("cols='100'"," rows='40'")); ?>
+    <?php echo Form::textarea("content", $post->content, $settings=array("cols='100'","rows='40'")); ?>
     <br/>
     <br/>
     <?php echo Form::submit("submit", "Submit"); ?>
