@@ -38,8 +38,10 @@ class Controller_Temp extends Controller_Template
     if ($this->auto_render)
     {
             $styles = array(
-                    '<link href=\'http://fonts.googleapis.com/css?family=Open+Sans\' rel=\'stylesheet\' type=\'text/css\'>' => 'print',
-                    'media/css/stylesheet.css' => 'screen',
+                '<link href=\'http://fonts.googleapis.com/css?family=Open+Sans\' rel=\'stylesheet\' type=\'text/css\'>' => 'print',
+                'media/css/stylesheet.css' => 'screen',
+                //'media/bootstrap/css/bootstrap-responsive.css' => 'boot1',
+                'media/bootstrap/css/bootstrap.css' => 'boot1',
             );
 
             $this->template->styles = array_merge( $this->template->styles, $styles );
