@@ -20,8 +20,12 @@ class Controller_Post extends Controller_Temp
             $mobileDevice = "";
         }
         
+        
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
+        $mobileDevice = $mobileDevice.$aTitle;
+        
         $this->template->title = View::bind_global('title', $aTitle);
+        $this->template->title = View::bind_global('site_title', $mobileDevice);
         $this->template->content = View::factory('post/index');
         $this->template->postItems = View::bind_global('postItems',$postItems);
     }
