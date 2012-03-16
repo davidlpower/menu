@@ -15,13 +15,13 @@ class Controller_Post extends Controller_Temp
 
         //If $browser is not null then device is mobile
         if ($browser != null) {
-            $mobileDevice = "This is a mobile device";
+            $mobileDevice = "Mobile :: ";
         } else {
-            $mobileDevice = "This is not a mobile device";
+            $mobileDevice = "";
         }
         
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
-        $this->template->title = View::bind_global('title', $aTitle);
+        $this->template->title = View::bind_global('title', $mobileDevice.$aTitle);
         $this->template->content = View::factory('post/index');
         $this->template->postItems = View::bind_global('postItems',$postItems);
     }
