@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
     <head profile="http://gmpg.org/xfn/11">
-        <title><?php echo $title ?></title>
+        <title><?php echo $site_title ?></title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
         <?php foreach ($styles as $file => $type)

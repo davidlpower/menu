@@ -20,6 +20,7 @@ class Controller_Temp extends Controller_Template
         {
             // Initialize empty values
             $this->template->title   = '';
+            $this->template->site_title   = '';
             $this->template->content = '';
 
             $this->template->styles = array();
