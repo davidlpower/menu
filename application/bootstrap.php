@@ -128,7 +128,7 @@ Route::set('admin', 'admin(/<action>)', array('action' => 'index|new|software|el
 	));
  
 
-Route::set('admin', 'admin(/<action>)/<id>))')
+Route::set('adminid', 'admin(/<action>)/<id>))')
 	->defaults(array(
 		'controller' => 'admin',
 	));
