@@ -16,7 +16,7 @@ class Controller_Post extends Controller_Temp {
                 ->find();
         
         //Check the device type
-        $mobileDevice = detect_device();
+        $mobileDevice = $this->detect_device();
         
         //If the site loaded something then
         if ($postItems->loaded())
@@ -51,7 +51,7 @@ class Controller_Post extends Controller_Temp {
                 ->find();
 
         //Check the device type
-        $mobileDevice = detect_device();
+        $mobileDevice = $this->detect_device();
 
 
         //If the site loaded something then
