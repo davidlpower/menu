@@ -31,10 +31,6 @@ class Controller_Post extends Controller_Temp {
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
 
-
-            echo "<pre>";
-            print_r($postItems);
-            die;
         }
         //If no posts then display message
         else
