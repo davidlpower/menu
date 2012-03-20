@@ -14,21 +14,9 @@ class Controller_Post extends Controller_Temp {
         $postItems = ORM::factory('post')
                 ->where('type', '=', 0)
                 ->find();
-
-
-
-        //detect device
-        $browser = Request::user_agent('mobile');
-        //http://kohanaframework.org/3.0/guide/api/Request - UserAgent Detection Here
-        //If $browser is not null then device is mobile
-        if ($browser != null)
-        {
-            $mobileDevice = "Mobile :: ";
-        }
-        else
-        {
-            $mobileDevice = "";
-        }
+        
+        //Check the device type
+        $mobileDevice = detect_device();
         
         //If the site loaded something then
         if ($postItems->loaded())
@@ -62,9 +50,39 @@ class Controller_Post extends Controller_Temp {
                 ->where('type', '=', 1)
                 ->find();
 
+        //Check the device type
+        $mobileDevice = detect_device();
+
+
+        //If the site loaded something then
+        if ($postItems->loaded())
+        {
+            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            $mobileDevice = $mobileDevice . $aTitle;
+
+            $this->template->title = View::bind_global('title', $aTitle);
+            $this->template->title = View::bind_global('site_title', $mobileDevice);
+            $this->template->content = View::factory('post/index');
+            $this->template->postItems = View::bind_global('postItems', $postItems);
+        }
+        //If no posts then display message
+        else
+        {
+            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            $mobileDevice = $mobileDevice . $aTitle;
+
+            $this->template->title = View::bind_global('title', $aTitle);
+            $this->template->title = View::bind_global('site_title', $mobileDevice);
+            $this->template->content = "<center>Nothing to see here.</center>";
+        }
+    }
+    
+    //Detect the device type
+    function detect_device(){
+        
         //detect device
         $browser = Request::user_agent('mobile');
-        //http://kohanaframework.org/3.0/guide/api/Request - UserAgent Detection Here
+        
         //If $browser is not null then device is mobile
         if ($browser != null)
         {
@@ -74,15 +92,8 @@ class Controller_Post extends Controller_Temp {
         {
             $mobileDevice = "";
         }
-
-
-        $aTitle = 'Software, <b>Electronics</b>, Music and all-round Geekery';
-        $mobileDevice = $mobileDevice . $aTitle;
-
-        $this->template->title = View::bind_global('title', $aTitle);
-        $this->template->title = View::bind_global('site_title', $mobileDevice);
-        $this->template->content = View::factory('post/index');
-        $this->template->postItems = View::bind_global('postItems', $postItems);
+        
+        return $mobileDevice;
     }
 
 }
