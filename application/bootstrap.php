@@ -113,14 +113,31 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+
+/*
 Route::set('default', '(<controller>(/<action>(/<id>)))')
         ->defaults(array(
             'controller' => 'post',
             'action' => 'index',
         ));
+*/
 
+Route::set('admin', 'admin/<action>', array('action' => 'new|software|electronics|music|cooking|everything_else'))
+	->defaults(array(
+		'controller' => 'admin',
+	));
+ 
+// allow http://test/, http://test/index, http://test/restricted
+Route::set('default', '(<action>(/<ignore>))', array('action' => 'software|electronics|music|everything_else|contact', 'ignore' => '.+'))
+	->defaults(array(
+		'controller' => 'post',
+		'action'	 => 'index',
+	));
+ 
+// send everything else to a 404 page
 Route::set('catch_all', '<path>', array('path' => '.+'))
-        ->defaults(array(
-            'controller' => 'errors',
-            'action' => '404'
-        ));
+	->defaults(array(
+		'controller' => 'errors',
+		'action'     => '404',
+	));
+?>
