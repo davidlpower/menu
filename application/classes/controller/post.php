@@ -76,6 +76,19 @@ class Controller_Post extends Controller_Temp {
             $this->template->content = "<center>Nothing to see here.</center>";
         }
     }
+    
+    public function action_music() {
+        $this->template->content = "<center>Music</center>";
+    }
+    
+    public function action_everything_else() {
+        $this->template->content = "<center>Everything Else</center>";
+    }
+    
+    public function action_contact() {
+        $this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
+David</a></center>";
+    }
 
     //Detect the device type
     function detect_device() {

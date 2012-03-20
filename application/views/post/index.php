@@ -10,15 +10,15 @@
         <div id="menuBar">
             <div class="centerTitle">
                 <!-- Add a link to the post page. -->
-                <?php echo HTML::anchor("/software", "Software"); ?>
+                <?php echo HTML::anchor("/", "Software"); ?>
                 <?php echo " | " ?>
-                <?php echo HTML::anchor("/", "Electronics"); ?>
+                <?php echo HTML::anchor("/electronics", "Electronics"); ?>
                 <?php echo " | " ?>
-                <?php echo HTML::anchor("/", "Music"); ?>
+                <?php echo HTML::anchor("/music", "Music"); ?>
                 <?php echo " | " ?>
-                <?php echo HTML::anchor("/", "Everything Else"); ?>
+                <?php echo HTML::anchor("/everything_else", "Everything Else"); ?>
                 <?php echo " | " ?>
-                <?php echo HTML::anchor("/", "Contact"); ?>
+                <?php echo HTML::anchor("/contact", "Contact"); ?>
             </div>
         </div>
 
