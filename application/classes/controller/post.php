@@ -12,7 +12,7 @@ class Controller_Post extends Controller_Temp {
         
         // load all post object from table that are software related
         $postItems = ORM::factory('post')
-                ->where('id', '=', 0)
+                ->where('type', '=', 0)
                 ->find();
         
         //detect device
@@ -42,7 +42,7 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are electronic related
         $postItems = ORM::factory('post')
-                ->where('id', '=', 1)
+                ->where('type', '=', 1)
                 ->find();
         
         //detect device
