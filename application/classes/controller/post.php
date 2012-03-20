@@ -2,7 +2,7 @@
 
 class Controller_Post extends Controller_Temp
 {
-    const INDEX_PAGE = '/post';
+    const INDEX_PAGE = '/';
     public $mobileDevice = null;
 
     public function action_index()
