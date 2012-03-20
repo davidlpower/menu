@@ -127,7 +127,7 @@ Route::set('admin', 'admin/<action>', array('action' => 'new|software|electronic
 		'controller' => 'admin',
 	));
  
-// allow http://test/, http://test/index, http://test/restricted
+
 Route::set('default', '(<action>(/<ignore>))', array('action' => 'post|software|electronics|music|everything_else|contact', 'ignore' => '.+'))
 	->defaults(array(
 		'controller' => 'post',

@@ -6,6 +6,5 @@
             <h1><?php echo($title) ?></h1>
         </div>
     </div>
-    <h1><?php echo'ERROR' ?></h1>
+    <h1>Oops! an error has occurred!</h1>
 </div>
-<h1><?php echo'ERROR' ?></h1>
