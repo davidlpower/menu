@@ -12,12 +12,12 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are software related
         $postItems = ORM::factory('post')
-                ->where('type', '=', 0)
+                ->where('type','=','0')
                 ->find();
-        
+
         //Check the device type
         $mobileDevice = $this->detect_device();
-        
+
         //If the site loaded something then
         if ($postItems->loaded())
         {
@@ -76,13 +76,13 @@ class Controller_Post extends Controller_Temp {
             $this->template->content = "<center>Nothing to see here.</center>";
         }
     }
-    
+
     //Detect the device type
-    function detect_device(){
-        
+    function detect_device() {
+
         //detect device
         $browser = Request::user_agent('mobile');
-        
+
         //If $browser is not null then device is mobile
         if ($browser != null)
         {
@@ -92,7 +92,7 @@ class Controller_Post extends Controller_Temp {
         {
             $mobileDevice = "";
         }
-        
+
         return $mobileDevice;
     }
 
