@@ -1,9 +1,9 @@
 <!--Display new menu-->
 <div id="menuBar">
     <div class="centerTitle">
-        <a href="<?php echo HTML::anchor("admin/new") ?>">New Post</a>
+        <a href="<?php echo HTML::anchor('admin/new') ?>"New Post</a>
         <?php echo " | " ?>
-        <a href='<?php echo HTML::anchor("admin/software") ?>'>Software</a>
+        <a href="<?php echo HTML::anchor('admin/software') ?>"Software</a>
         <?php echo " | " ?>
         <a href='<?php echo HTML::anchor("admin/electronics") ?>'>Electronics</a>  
         <?php echo " | " ?>
