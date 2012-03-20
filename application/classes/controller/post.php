@@ -8,6 +8,7 @@ class Controller_Post extends Controller_Temp {
 
     public $mobileDevice = null;
 
+    //Load the softeware posts 0
     public function action_index() {
 
         // load all post object from table that are software related
@@ -43,6 +44,7 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
+    //Load the electronics posts 1
     public function action_electronics() {
 
         // load all post object from table that are electronic related
@@ -77,15 +79,21 @@ class Controller_Post extends Controller_Temp {
         }
     }
     
+    
+    //Load the music posts 2
     public function action_music() {
         $this->template->content = "<center>Music</center>";
     }
     
+    //Load the everythingelse posts 3
     public function action_everything_else() {
         $this->template->content = "<center>Everything Else</center>";
     }
     
+    //Load the contact me page
     public function action_contact() {
+        
+        //Load the page
         $this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
 David</a></center>";
     }
