@@ -13,15 +13,10 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are software related
         $postItems = ORM::factory('post')
-                ->where('type','=','0')
+                ->where('type', '=', '0')
                 ->find();
-        
-        /*
-        echo "<pre>";
-        print_r($postItems);
-        die;
-        */
-        
+
+
         //Check the device type
         $mobileDevice = $this->detect_device();
 
@@ -35,6 +30,12 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
+
+            /*
+              echo "<pre>";
+              print_r($postItems);
+              die;
+             */
         }
         //If no posts then display message
         else
@@ -84,21 +85,20 @@ class Controller_Post extends Controller_Temp {
             $this->template->content = "<center>Nothing to see here.</center>";
         }
     }
-    
-    
+
     //Load the music posts 2
     public function action_music() {
         $this->template->content = "<center>Music</center>";
     }
-    
+
     //Load the everythingelse posts 3
     public function action_everything_else() {
         $this->template->content = "<center>Everything Else</center>";
     }
-    
+
     //Load the contact me page
     public function action_contact() {
-        
+
         //Load the page
         $this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
 David</a></center>";
