@@ -1,7 +1,7 @@
 <!--Display new menu-->
 <div id="menuBar">
     <div class="centerTitle">
-        <a href="<?php echo HTML::anchor('admin/new') ?>"New Post</a>
+        <?php echo HTML::anchor('admin/new','New Post') ?>
         <?php echo " | " ?>
         <a href="<?php echo HTML::anchor('admin/software') ?>"Software</a>
         <?php echo " | " ?>
