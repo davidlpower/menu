@@ -141,4 +141,3 @@ Route::set('catch_all', '<path>', array('path' => '.+'))
 		'controller' => 'errors',
 		'action'     => '404',
 	));
-?>
