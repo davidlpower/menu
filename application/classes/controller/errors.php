@@ -6,6 +6,5 @@ class Controller_Errors extends Controller {
         $this->request->status = 404;
         $this->request->response = View::factory('errors/404');
     }
-
 }
 ?>

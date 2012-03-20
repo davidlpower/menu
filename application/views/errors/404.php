@@ -5,4 +5,7 @@
         <div class="centerTitle">
             <h1><?php echo($title) ?></h1>
         </div>
+    </div>
+    
+    <h1>Error</h1>
 </div>
