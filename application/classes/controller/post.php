@@ -15,6 +15,10 @@ class Controller_Post extends Controller_Temp {
         $postItems = ORM::factory('post')
                 ->where('type','=','0')
                 ->find();
+        
+        echo "<pre>";
+        print_r($postItems);
+        die;
 
         //Check the device type
         $mobileDevice = $this->detect_device();
