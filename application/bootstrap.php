@@ -122,7 +122,7 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
         ));
 */
 
-Route::set('adminid', 'admin(/<action>(/<id>))', array('action' => 'index|new|software|electronics|music|cooking|everything_else'))
+Route::set('adminid', 'admin(/<action>(/<id>))')
 	->defaults(array(
 		'controller' => 'admin',
 	));
