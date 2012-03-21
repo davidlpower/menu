@@ -20,7 +20,7 @@
     <?php echo Form::label("title", "Title"); ?>
     <br/>
     <?php
-        if(!isset($post)){
+        if($post->type == null){
             Form::label("type", "Type");
         }   Form::input("type", $post->type);
     ?>
