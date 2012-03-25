@@ -9,7 +9,7 @@ class Helper_BlogHelper
     //public $var = 'a default value';
 
     // method declaration
-    public static function debug($to_Prnt) {
+    public static function debugPrint($to_Prnt) {
         echo "<pre>";
         print_r($to_Prnt);
         die;
