@@ -1,5 +1,5 @@
 <?php
-class Helper_BlogHelper
+class Helper_Helper
 {
 
     public static function debugPrint($to_Prnt) {
