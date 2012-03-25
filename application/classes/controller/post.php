@@ -15,8 +15,9 @@ class Controller_Post extends Controller_Temp {
         $postItems = ORM::factory('post')
                 ->where('type', '=', '0')
                 ->find();
-         
-        BlogHelper::debugPrint($postItems);
+        
+        $blogHelper = BlogHelper::instance(); 
+        //$blogHelper::debugPrint($postItems);
 
         //Check the device type
         $mobileDevice = $this->detect_device();
