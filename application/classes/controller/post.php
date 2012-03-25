@@ -16,6 +16,9 @@ class Controller_Post extends Controller_Temp {
                 ->where('type', '=', '0')
                 ->find();
 
+        echo "<pre>";
+        print_r($postItems);
+        die;
 
         //Check the device type
         $mobileDevice = $this->detect_device();
