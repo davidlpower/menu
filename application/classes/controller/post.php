@@ -15,9 +15,8 @@ class Controller_Post extends Controller_Temp {
         $postItems = ORM::factory('post')
                 ->where('type', '=', '0')
                 ->find();
-        
-        //$blogHelper = Help_Blog::instance(); 
-        
+
+        $blogHelper = Help_Blog::instance(); 
         //Check the device type
         $mobileDevice = $this->detect_device();
 
@@ -31,7 +30,6 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
-
         }
         //If no posts then display message
         else
