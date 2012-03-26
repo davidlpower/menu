@@ -32,7 +32,7 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
-            Blog::printMessage("loaded....");
+            //Blog::printMessage("loaded....");
         }
         //If no posts then display message
         else
