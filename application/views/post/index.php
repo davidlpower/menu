@@ -21,7 +21,6 @@
                 <?php echo HTML::anchor("/contact", "Contact"); ?>
             </div>
         </div>
-
     </div>
 
     <?php foreach ($postItems as $post) : ?>
