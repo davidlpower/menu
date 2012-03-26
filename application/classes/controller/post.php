@@ -31,8 +31,8 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->head = View::factory('template/head');
             $this->template->content = View::factory('post/index');
-            die;
             $this->template->foot = View::factory('template/foot');
+            die;
             $this->template->postItems = View::bind_global('postItems', $postItems);
         }
 
