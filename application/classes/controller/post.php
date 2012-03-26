@@ -33,7 +33,7 @@ class Controller_Post extends Controller_Temp {
 
         
         //If the site loaded something then
-        if($postItems->loaded())
+        if($postItems->count() > 0)
         {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
