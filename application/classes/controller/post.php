@@ -16,23 +16,28 @@ class Controller_Post extends Controller_Temp {
                 ->from('posts')
                 ->where('type', '=', '0')
                 ->execute();
-        
+
         //Check the device type
         $mobileDevice = $this->detect_device();
 
+
+        foreach ($postItems as $user) {
+            // Send reminder email to $user['email']
+            echo $user['title'] . " needs to verify his/her account\n";
+        }
+
         //If the site loaded something then
-        if($postItems->count() > 0)
+        if ($postItems->count() > 0)
         {
-            Blog::debugPrint($postItems);
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            
+
             $this->template->title = View::bind_global('title', $aTitle);
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
         }
-         
+
         //If no posts then display message
         else
         {
