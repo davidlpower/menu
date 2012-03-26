@@ -17,7 +17,7 @@ class Controller_Post extends Controller_Temp {
                 ->where('type', '=', '0')
                 ->find();
         
-        $postItems = DB::select()->from('users')->where('type', '=', 0)->execute();
+        $postItems = DB::select()->from('posts')->where('type', '=', 0)->execute();
         
         //Check the device type
         $mobileDevice = $this->detect_device();
