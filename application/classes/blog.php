@@ -7,5 +7,9 @@ class Blog
         print_r($to_Prnt);
         die;
     }
+    
+    public static function printMessage($to_Prnt) {
+        echo $to_Prnt;
+    }
 }
 ?>

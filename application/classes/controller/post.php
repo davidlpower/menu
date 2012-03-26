@@ -13,7 +13,7 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are software related
         $postItems = ORM::factory('post')
-                //->where('type', '=', '0')
+                ->where('type', '=', '0')
                 ->find();
 
         //Class that prints errors to the screen;
@@ -25,6 +25,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->loaded())
         {
+            Blog::printMessage("loaded....");
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
 
