@@ -7,7 +7,6 @@ class Controller_Post extends Controller_Temp {
     const INDEX_PAGE = '/';
 
     public $mobileDevice = null;
-    public $postItems = null;
 
     //Load the softeware posts 0
     public function action_index() {
@@ -21,6 +20,16 @@ class Controller_Post extends Controller_Temp {
         $mobileDevice = $this->detect_device();
 
         //If the site loaded something then
+            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            $mobileDevice = $mobileDevice . $aTitle;
+
+            $this->template->title = View::bind_global('title', $aTitle);
+            $this->template->title = View::bind_global('site_title', $mobileDevice);
+            $this->template->content = View::factory('post/index');
+            $this->template->postItems = View::bind_global('postItems', $postItems);
+
+        /*
+         * //If the site loaded something then
         if($postItems->loaded())
         {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
@@ -31,6 +40,7 @@ class Controller_Post extends Controller_Temp {
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
         }
+         
         //If no posts then display message
         else
         {
@@ -41,6 +51,8 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
+          */
+         
     }
 
     //Load the electronics posts 1
