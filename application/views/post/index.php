@@ -28,6 +28,9 @@
         <div class="menuItem">
             <h2><?php echo $post['title']; ?></h2>
             <?php echo $post['content']; ?>
+            <div class="toRight">
+                <?php echo $post['dataAdded']; ?>
+            </div>
         </div>
 
     <?php endforeach; ?>
