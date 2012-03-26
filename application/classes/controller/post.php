@@ -38,7 +38,6 @@ class Controller_Post extends Controller_Temp {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
             
-            Blog::debugPrint($aTitle);
             $this->template->title = View::bind_global('title', $aTitle);
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
