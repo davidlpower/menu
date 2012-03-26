@@ -21,9 +21,9 @@ class Controller_Temp extends Controller_Template
             // Initialize empty values
             $this->template->title   = '';
             $this->template->site_title   = '';
-            $this->template->headder = '';
+            $this->template->head = '';
             $this->template->content = '';
-            $this->template->footer = '';
+            $this->template->foot = '';
 
             $this->template->styles = array();
         }
