@@ -12,12 +12,12 @@ class Controller_Post extends Controller_Temp {
     public function action_index() {
 
         // load all post object from table that are software related
-        $postItems = ORM::factory('post')
+        $val = ORM::factory('post')
                 ->select('*')
                 ->where('type', '=', '0')
                 ->find();
         
-        $val = DB::select()->from('users')->where('type', '=', 0)->execute();
+        $postItems = DB::select()->from('users')->where('type', '=', 0)->execute();
         
         //Check the device type
         $mobileDevice = $this->detect_device();
