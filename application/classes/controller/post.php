@@ -15,6 +15,7 @@ class Controller_Post extends Controller_Temp {
         $postItems = DB::select()
                 ->from('posts')
                 ->where('type', '=', '0')
+                ->order_by('dateAdded')
                 ->execute();
 
         //Check the device type
