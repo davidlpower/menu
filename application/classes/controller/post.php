@@ -17,6 +17,8 @@ class Controller_Post extends Controller_Temp {
                 ->where('type', '=', '0')
                 ->find();
         
+        $val = DB::select()->from('users')->where('verified', '=', 0)->execute();
+        
         //Check the device type
         $mobileDevice = $this->detect_device();
 
