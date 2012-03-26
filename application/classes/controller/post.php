@@ -23,9 +23,9 @@ class Controller_Post extends Controller_Temp {
 
         foreach ($postItems as $user) {
             // Send reminder email to $user['email']
-            echo $user['title'] . " needs to verify his/her account\n";
+            echo $user['title'] . " is the title.\n";
         }
-
+        die;
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
