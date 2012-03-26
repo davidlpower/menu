@@ -13,6 +13,7 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are software related
         $postItems = ORM::factory('post')
+                ->select('*')
                 ->where('type', '=', '0')
                 ->find();
         
@@ -28,8 +29,8 @@ class Controller_Post extends Controller_Temp {
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
 
-        /*
-         * //If the site loaded something then
+        
+        //If the site loaded something then
         if($postItems->loaded())
         {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
@@ -51,8 +52,6 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
-          */
-         
     }
 
     //Load the electronics posts 1
