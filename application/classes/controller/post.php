@@ -23,9 +23,8 @@ class Controller_Post extends Controller_Temp {
         $mobileDevice = $this->detect_device();
 
         //If the site loaded something then
-        if ($postItems->loaded())
+        if($postItems->loaded())
         {
-            Blog::printMessage("loaded....");
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
 
@@ -33,12 +32,11 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
+            Blog::printMessage("loaded....");
         }
         //If no posts then display message
         else
         {
-
-
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
 
