@@ -20,13 +20,6 @@ class Controller_Post extends Controller_Temp {
         //Check the device type
         $mobileDevice = $this->detect_device();
 
-
-        foreach ($postItems as $user) {
-            // Send reminder email to $user['email']
-            echo $user['title'] . "\n";
-            echo $user['content'] . "\n";
-        }
-        die;
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
@@ -36,7 +29,7 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('title', $aTitle);
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
-            $this->template->postItems = View::bind_global('postItems', $postItems);
+            $this->template->postItems = View::bind_global('post', $postItems);
         }
 
         //If no posts then display message
