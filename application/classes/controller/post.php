@@ -29,7 +29,7 @@ class Controller_Post extends Controller_Temp {
             $this->template->title = View::bind_global('title', $aTitle);
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
-            $this->template->postItems = View::bind_global('post', $postItems);
+            $this->template->postItems = View::bind_global('postItems', $postItems);
         }
 
         //If no posts then display message
