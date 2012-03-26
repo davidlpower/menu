@@ -13,7 +13,7 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are software related
         $postItems = ORM::factory('post')
-                ->where('type', '=', '0')
+                //->where('type', '=', '0')
                 ->find();
 
         Blog::debugPrint($postItems); 
