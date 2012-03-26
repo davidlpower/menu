@@ -14,7 +14,7 @@ class Controller_Post extends Controller_Temp {
         // load all post object from table that are software related
         $postItems = DB::select()
                 ->from('posts')
-                ->where('type', '=', 0)
+                ->where('type', '=', '0')
                 ->execute();
         
         //Check the device type
@@ -23,6 +23,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if($postItems->count() > 0)
         {
+            Blog::debugPrint($postItems);
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
             
