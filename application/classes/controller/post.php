@@ -16,7 +16,7 @@ class Controller_Post extends Controller_Temp {
                 ->where('type', '=', '0')
                 ->find();
 
-        $blogHelper = Blog::instance(); 
+        Blog::debugPrint($to_Prnt); 
         //Check the device type
         $mobileDevice = $this->detect_device();
 
