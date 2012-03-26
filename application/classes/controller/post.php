@@ -23,7 +23,8 @@ class Controller_Post extends Controller_Temp {
 
         foreach ($postItems as $user) {
             // Send reminder email to $user['email']
-            echo $user['title'] . " is the title.\n";
+            echo $user['title'] . "\n";
+            echo $user['content'] . "\n";
         }
         die;
         //If the site loaded something then
