@@ -27,7 +27,7 @@ class Controller_Post extends Controller_Temp {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
             $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->title = View::bind_global('site_title', $mobileDevice);
+            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
             $this->template->head = View::factory('template/head');
             $this->template->content = View::factory('post/index');
             $this->template->foot = View::factory('template/foot');
@@ -41,10 +41,8 @@ class Controller_Post extends Controller_Temp {
             $mobileDevice = $mobileDevice . $aTitle;
 
             $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->title = View::bind_global('site_title', $mobileDevice);
-            $this->template->head = View::factory('post/index');
+            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
-            $this->template->foot = View::factory('template/foot');
         }
     }
 
@@ -67,7 +65,7 @@ class Controller_Post extends Controller_Temp {
             $mobileDevice = $mobileDevice . $aTitle;
 
             $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->title = View::bind_global('site_title', $mobileDevice);
+            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
             $this->template->postItems = View::bind_global('postItems', $postItems);
         }
@@ -78,7 +76,7 @@ class Controller_Post extends Controller_Temp {
             $mobileDevice = $mobileDevice . $aTitle;
 
             $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->title = View::bind_global('site_title', $mobileDevice);
+            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
     }
