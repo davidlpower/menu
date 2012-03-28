@@ -43,6 +43,7 @@ class Controller_Post extends Controller_Temp {
             $view->set("content", 'post/index');
             $view->set("foot", 'template/foot');
             $this->template->set('content', $view);
+            $this->template->postItems = View::bind_global('postItems', $postItems);
         }
 
         //If no posts then display message
