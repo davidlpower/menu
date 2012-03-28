@@ -7,8 +7,7 @@
         foreach ($styles as $file => $type)
             echo HTML::style($file, array('media' => $type)), "\n"
             ?>
-
-        <div id="fb-root"></div>
+        
         <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -27,7 +26,6 @@
             &copy;David Power
             <div class="fb-like" data-href="http://www.karujahundu.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="segoe ui"></div>
         </div>
-
 
     </body>  
 </html>
