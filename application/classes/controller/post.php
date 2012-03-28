@@ -42,7 +42,7 @@ class Controller_Post extends Controller_Temp {
             $view->set("head", 'template/head');
             $view->set("content", 'post/index');
             $view->set("foot", 'template/foot');
-            $this->template->content = View::factory($view);
+            $this->template->set('content', $view);
         }
 
         //If no posts then display message
