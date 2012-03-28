@@ -26,23 +26,11 @@ class Controller_Post extends Controller_Temp {
         {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            /*
             $this->template->title = View::bind_global('title', $aTitle);
             $this->template->title = View::bind_global('site_title', $mobileDevice);
             $this->template->head = View::factory('template/head');
             $this->template->content = View::factory('post/index');
             $this->template->foot = View::factory('template/foot');
-            $this->template->postItems = View::bind_global('postItems', $postItems);
-            */
-            
-            $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
-            
-            $view = new View('template/template'); 
-            $view->set("head", 'template/head');
-            $view->set("content", 'post/index');
-            $view->set("foot", 'template/foot');
-            $this->template->set('content', $view);
             $this->template->postItems = View::bind_global('postItems', $postItems);
         }
 
