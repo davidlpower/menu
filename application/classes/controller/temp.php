@@ -41,7 +41,7 @@ class Controller_Temp extends Controller_Template {
                 'media/css/stylesheet.css' => 'screen',
             );
 
-            $this->template->head->styles = array_merge($this->template->styles, $styles);
+            $this->template->head->styles = array_merge($this->template->head->styles, $styles);
         }
         parent::after();
     }
