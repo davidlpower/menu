@@ -18,8 +18,11 @@ class Controller_Temp extends Controller_Template {
         if ($this->auto_render)
         {
             // Initialize empty values
-            View::bind_global('title', 'Karujahundu');
-            View::bind_global('site_title', 'Karujahundu');
+            $title = "Karujahundu";
+            $site_title = "Karujahundu";
+            
+            View::bind_global('title', $title);
+            View::bind_global('site_title', $site_title);
             
             $this->template->head = view::factory('template/head');
             if($this->request->controller() === 'admin'){
