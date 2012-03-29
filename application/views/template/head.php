@@ -5,6 +5,6 @@
         </div>
 
         <!--Display new menu-->
-        <?php include 'application/views/template/menuBar.php';?>
+        <?php echo $menu ?>
 
     </div>

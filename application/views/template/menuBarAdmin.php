@@ -1,6 +1,8 @@
 <!--Display new menu-->
 <div id="menuBar">
     <div class="centerTitle">
+        <?php echo HTML::anchor('admin/new','New Post') ?>
+        <?php echo " | " ?>
         <?php echo HTML::anchor('admin/software','Software') ?>
         <?php echo " | " ?>
         <?php echo HTML::anchor('admin/electronics','Electronics') ?>
