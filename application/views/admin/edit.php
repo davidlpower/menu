@@ -8,8 +8,7 @@
     });
 </script>
 
-        <?php include 'application/views/template/menuBar.php'; ?>
-    </div>
+
     <br/>
     <?php echo Form::open('admin/post/' . $post->id); ?>
     <?php echo Form::label("title", "Title"); ?>
