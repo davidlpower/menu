@@ -31,7 +31,7 @@ class Controller_Post extends Controller_Temp {
 
             $this->template->content = View::factory('post/index');
            
-            $this->template->content->postItems = View::bind_global('postItems', $postItems);
+            $this->template->content->postItems = $postItems;
         }
 
         //If no posts then display message
