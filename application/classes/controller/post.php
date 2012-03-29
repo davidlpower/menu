@@ -28,9 +28,9 @@ class Controller_Post extends Controller_Temp {
             $mobileDevice = $mobileDevice . $aTitle;
             $this->template->title = View::bind_global('title', $aTitle);
             $this->template->site_title = View::bind_global('site_title', $mobileDevice);
-            $this->template->head = View::factory('template/head');
+
             $this->template->content = View::factory('post/index');
-            $this->template->foot = View::factory('template/foot');
+           
             $this->template->postItems = View::bind_global('postItems', $postItems);
         }
 
