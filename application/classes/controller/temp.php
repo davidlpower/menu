@@ -22,7 +22,7 @@ class Controller_Temp extends Controller_Template {
             $this->template->site_title = '';
             
             $this->template->head = view::factory('template/head');
-            if($this->request->controller() = 'admin'){
+            if($this->request->controller() === 'admin'){
                 $this->template->head->menu = view::factory('template/menuBarAdmin');
             }else{
                $this->template->head->menu = view::factory('template/menuBar'); 
