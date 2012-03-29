@@ -21,9 +21,9 @@ class Controller_Admin extends Controller_Temp
         }
         
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
-        $this->template->title = View::bind_global('title', $aTitle);
+        View::bind_global('title', $aTitle);
         $this->template->content = View::factory('admin/index');
-        $this->template->postItems = View::bind_global('postItems',$postItems);
+        $this->template->content->postItems = $postItems;
     }
 
     // loads the new article form
@@ -32,9 +32,9 @@ class Controller_Admin extends Controller_Temp
         $post = new Model_post();
         
         $aTitle = 'Edit or Post something new!';
-        $this->template->title = View::bind_global('title', $aTitle);
+        View::bind_global('title', $aTitle);
         $this->template->content = View::factory('admin/edit');
-        $this->template->post = View::bind_global('post',$post);
+        $this->template->content->post = $post;
     }
 
     // save the article
@@ -54,9 +54,9 @@ class Controller_Admin extends Controller_Temp
         $post_id = $this->request->param('id');
         $post = new Model_post($post_id);
         $aTitle = 'Edit that post!';
-        $this->template->title = View::bind_global('title', $aTitle);
+        View::bind_global('title', $aTitle);
         $this->template->content = View::factory('admin/edit');
-        $this->template->post = View::bind_global('post',$post);
+        $this->template->content->post = $post;
     }
 
     // delete the post item
