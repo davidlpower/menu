@@ -8,11 +8,6 @@
     });
 </script>
 
-<div id="container">
-    <div id="title">
-        <div class="centerTitle">
-            <h1><?php echo($title) ?></h1>
-        </div>
         <?php include 'application/views/template/menuBar.php'; ?>
     </div>
     <br/>
@@ -33,4 +28,3 @@
     <br/>
     <?php echo Form::submit("submit", "Submit"); ?>
     <?php echo Form::close(); ?>
-</div>
