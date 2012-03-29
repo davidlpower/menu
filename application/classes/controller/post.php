@@ -30,7 +30,7 @@ class Controller_Post extends Controller_Temp {
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
-           
+
             $this->template->content->postItems = $postItems;
         }
 
@@ -46,9 +46,8 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
-    //Load the electronics posts 1
-    public function action_electronics() {
-
+    //Load the electronics posts
+    public function action_software() {
         // load all post object from table that are electronic related
         $postItems = ORM::factory('post')
                 ->where('type', '=', 1)
@@ -81,42 +80,76 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
-    //Load the music posts 2
-    public function action_music() {
-        $this->template->content = "<center>Music</center>";
-    }
+//Load the electronics posts 1
+public function action_electronics() {
 
-    //Load the everythingelse posts 3
-    public function action_everything_else() {
-        $this->template->content = "<center>Everything Else</center>";
-    }
+// load all post object from table that are electronic related
+$postItems = ORM::factory('post')
+->where('type', '=', 1)
+->find();
 
-    //Load the contact me page
-    public function action_contact() {
+//Check the device type
+$mobileDevice = $this->detect_device();
 
-        //Load the page
-        $this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
+
+//If the site loaded something then
+if ($postItems->loaded())
+{
+$aTitle = 'Software, Electronics, Music and all-round Geekery';
+$mobileDevice = $mobileDevice . $aTitle;
+
+$this->template->title = View::bind_global('title', $aTitle);
+$this->template->site_title = View::bind_global('site_title', $mobileDevice);
+$this->template->content = View::factory('post/index');
+$this->template->postItems = View::bind_global('postItems', $postItems);
+}
+//If no posts then display message
+else {
+$aTitle = 'Software, Electronics, Music and all-round Geekery';
+$mobileDevice = $mobileDevice . $aTitle;
+
+$this->template->title = View::bind_global('title', $aTitle);
+$this->template->site_title = View::bind_global('site_title', $mobileDevice);
+$this->template->content = "<center>Nothing to see here.</center>";
+}
+}
+
+//Load the music posts 2
+public function action_music() {
+$this->template->content = "<center>Music</center>";
+}
+
+//Load the everythingelse posts 3
+public function action_everything_else() {
+$this->template->content = "<center>Everything Else</center>";
+}
+
+//Load the contact me page
+public function action_contact() {
+
+//Load the page
+$this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
 David</a></center>";
-    }
+}
 
-    //Detect the device type
-    function detect_device() {
+//Detect the device type
+function detect_device() {
 
-        //detect device
-        $browser = Request::user_agent('mobile');
+//detect device
+$browser = Request::user_agent('mobile');
 
-        //If $browser is not null then device is mobile
-        if ($browser != null)
-        {
-            $mobileDevice = "Mobile :: ";
-        }
-        else
-        {
-            $mobileDevice = "";
-        }
+//If $browser is not null then device is mobile
+if ($browser != null)
+{
+$mobileDevice = "Mobile :: ";
+}
+else
+{
+$mobileDevice = "";
+}
 
-        return $mobileDevice;
-    }
+return $mobileDevice;
+}
 
 }
 
