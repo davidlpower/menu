@@ -1,14 +1,14 @@
 <!--Display new menu-->
 <div id="menuBar">
     <div class="centerTitle">
-        <?php echo HTML::anchor('admin/software','Software') ?>
+        <?php echo HTML::anchor('software','Software') ?>
         <?php echo " | " ?>
-        <?php echo HTML::anchor('admin/electronics','Electronics') ?>
+        <?php echo HTML::anchor('electronics','Electronics') ?>
         <?php echo " | " ?>
-        <?php echo HTML::anchor('admin/music','Music') ?>
+        <?php echo HTML::anchor('music','Music') ?>
         <?php echo " | " ?>
-        <?php echo HTML::anchor('admin/cooking','Cooking') ?>
+        <?php echo HTML::anchor('cooking','Cooking') ?>
         <?php echo " | " ?>
-        <?php echo HTML::anchor('admin/everything_else','Everything Else') ?>
+        <?php echo HTML::anchor('everything_else','Everything Else') ?>
     </div>
 </div>
