@@ -26,12 +26,12 @@ class Controller_Post extends Controller_Temp {
         {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
+            View::bind_global('title', $aTitle);
+            View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
            
-            $this->template->postItems = View::bind_global('postItems', $postItems);
+            $this->template->content->postItems = View::bind_global('postItems', $postItems);
         }
 
         //If no posts then display message
@@ -40,8 +40,8 @@ class Controller_Post extends Controller_Temp {
             $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
 
-            $this->template->title = View::bind_global('title', $aTitle);
-            $this->template->site_title = View::bind_global('site_title', $mobileDevice);
+            View::bind_global('title', $aTitle);
+            View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
     }

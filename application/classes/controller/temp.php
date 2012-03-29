@@ -23,7 +23,7 @@ class Controller_Temp extends Controller_Template {
             $this->template->head = view::factory('template/head');
             $this->template->content = '';
             $this->template->foot = view::factory('template/foot');
-            $this->template->styles = array();
+            $this->template->head->styles = array();
         }
     }
 
@@ -41,7 +41,7 @@ class Controller_Temp extends Controller_Template {
                 'media/css/stylesheet.css' => 'screen',
             );
 
-            $this->template->styles = array_merge($this->template->styles, $styles);
+            $this->template->head->styles = array_merge($this->template->styles, $styles);
         }
         parent::after();
     }
