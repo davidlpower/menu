@@ -20,9 +20,11 @@
 }
 .menuItem{
     background-color: #E8F9FF;
-    width: 90%;
-    padding: 5px 10px 20px; 
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
+    padding: 5px 10px 20px;
+    width: 90%;
 }
 
 .footer{
