@@ -1,7 +1,7 @@
 #container{
     width: 80%;
     margin: auto;
-    padding: 20px;
+    padding: 20px,20px,20px,20px;
     border: 1px dashed #999999;
     background: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
