@@ -20,9 +20,9 @@
 }
 .menuItem{
     background-color: #E8F9FF;
-    margin: 2px 2px 2px 2px;
     width: 90%;
-    margin: auto;
+    padding: 5px 10px 20px; 
+    margin-top: 15px;
 }
 
 .footer{
