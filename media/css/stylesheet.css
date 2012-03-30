@@ -1,7 +1,7 @@
 #container{
     width: 80%;
     margin: auto;
-    padding: 20px,20px,20px,20px;
+    padding: 20px;
     border: 1px dashed #999999;
     background: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
@@ -20,7 +20,7 @@
 }
 .menuItem{
     background-color: #E8F9FF;
-    margin: 0px 2px 0px 2px;
+    margin: 2px 2px 2px 2px;
     width: 90%;
     margin: auto;
 }
