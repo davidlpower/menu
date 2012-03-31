@@ -42,6 +42,7 @@ class Controller_Admin extends Controller_Temp
     {
         $post_id = $this->request->param('id');
         $post = new Model_post($post_id);
+        Blog::debugPrint($post);
         $post->values($_POST); // populate $post object from $_post array
         $post->save(); // saves post to database
 
