@@ -21,7 +21,6 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $mobileDevice = $mobileDevice . $aTitle;
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
