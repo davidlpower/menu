@@ -33,11 +33,17 @@ class Controller_Admin extends Controller_Temp
     public function action_new()
     {
         $post = new Model_post();
+        $some_var = DB::select()
+                ->from('posts');
+        
+        exit($some_var);
+        $array = array('Software','Electronics','Cooking');
         
         $aTitle = 'Edit or Post something new!';
         View::bind_global('title', $aTitle);
         $this->template->content = View::factory('admin/edit');
         $this->template->content->post = $post;
+        $this->template->content->category = $array;
     }
 
     // save the article
