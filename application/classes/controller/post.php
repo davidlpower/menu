@@ -12,7 +12,7 @@ class Controller_Post extends Controller_Temp {
     public function action_index() {
 
         // load all post object from table that are software related
-        $postItems = DB::select()->from('posts')->order_by('posts.id')->limit(2, 'DESC')->execute();
+        $postItems = DB::select()->from('posts')->order_by('posts.id')->limit(2, DESC)->execute();
         Blog::debugPrint($postItems);
         //$postItems = DB::query(Database::SELECT, 'SELECT * FROM  `posts` ORDER BY  `posts`.`id` DESC LIMIT 2');
         
