@@ -8,6 +8,8 @@
     });
 </script>
 
+<?php Blog::debugPrint($category)
+        ?>
 
     <br/>
     <?php echo Form::open('admin/post/' . $post->id); ?>
