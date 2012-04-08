@@ -33,7 +33,7 @@ if ($post->type == null)
     // print the groups available to the user here.
     foreach ($category as $id => $category) {
         echo '<option value="' . $id . '" ';
-        if ($id == $current_type)
+        if ($id == $current_type['type'])
         {
             echo 'selected="selected"';
         }
