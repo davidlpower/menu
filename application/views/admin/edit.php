@@ -50,8 +50,10 @@ if ($post->type == null)
 <br/>
 <label for="published" class="published-label">Published: </label>
 <?php
-    echo Form::radio('Published', 1, 1);
-    echo Form::radio('Published', 0, 0);
+    echo 'Yes: ';
+    echo Form::radio('Published', 1);
+    echo 'No: ';
+    echo Form::radio('Published', 0);
 ?>
 <br/>
 <br/>
