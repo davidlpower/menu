@@ -45,10 +45,11 @@ if ($post->type == null)
     }
     ?>
 </select>
-<?php 
-if(!isset($post->id)){
-    $code = '<input type="hidden" value="echo date(\'Y-m-d H:i:s\')" id="dateAdded" name="dateAdded">';
-   echo '<input type="hidden" value="' . eval($code) . '" id="dateAdded" name="dateAdded">';
+<?php
+if (!isset($post->id))
+{
+    $date = date('Y-m-d H:i:s');
+    echo '<input type="hidden" value="' . $date . '\" id="dateAdded" name="dateAdded">';
 }
 ?>
 
@@ -56,10 +57,10 @@ if(!isset($post->id)){
 <br/>
 <label for="published">Published: </label>
 <?php
-    echo 'Yes: ';
-    echo Form::radio('published', 1);
-    echo 'No: ';
-    echo Form::radio('published', 0);
+echo 'Yes: ';
+echo Form::radio('published', 1);
+echo 'No: ';
+echo Form::radio('published', 0);
 ?>
 <br/>
 <br/>
