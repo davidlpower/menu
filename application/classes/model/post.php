@@ -14,8 +14,12 @@ class Model_Post extends ORM {
     public function all_categories() {
 
         $results = DB::select()->from('post_category')->execute();
-        $results->as_array();
-        print_r($results);
+        $array = array();
+        foreach($results as $id => $category){
+            $array[$id] = $category;
+        }
+        
+        print_r($array);
         die;
         return $results;
     }
