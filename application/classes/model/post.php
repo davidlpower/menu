@@ -18,7 +18,7 @@ class Model_Post extends ORM {
         foreach($results as $id => $category){
             $array[$id] = $category;
         }
-        
+        echo '<pre>';
         print_r($array);
         die;
         return $results;
