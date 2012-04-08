@@ -21,6 +21,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
+            
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -31,7 +32,7 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
 
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
@@ -50,7 +51,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -62,7 +63,7 @@ class Controller_Post extends Controller_Temp {
         else
         {
             
-            $mobileDevice = $mobileDevice . $aTitle;
+            
 
             
             View::bind_global('site_title', $mobileDevice);
@@ -83,7 +84,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = View::factory('post/index');
 
@@ -93,7 +94,7 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
@@ -111,7 +112,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -122,7 +123,7 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
@@ -141,7 +142,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -152,7 +153,7 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
 
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
@@ -171,7 +172,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -182,7 +183,7 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $mobileDevice = $mobileDevice . $aTitle;
+            
             
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
