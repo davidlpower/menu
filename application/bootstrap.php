@@ -134,7 +134,7 @@ Route::set('admin', 'admin(/<action>)', array('action' => 'index|new|software|el
 	));
  
 
-Route::set('default', '(<action>(/<ignore>))', array('action' => 'index|post|software|electronics|music|everything_else|contact', 'ignore' => '.+'))
+Route::set('default', '(<action>(/<ignore>))', array('action' => 'index|post|software|electronics|music|cooking|everything_else|contact', 'ignore' => '.+'))
 	->defaults(array(
 		'controller' => 'post',
 		'action'	 => 'index',
