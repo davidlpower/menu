@@ -77,15 +77,13 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
-//Load the electronics posts 1
+    //Load the electronics posts 1
     public function action_electronics() {
 
-// load all post object from table that are electronic related
-        $postItems = ORM::factory('post')
-                ->where('type', '=', 2)
-                ->find();
+        // load all post object from table that are electronic related
+        $postItems = DB::select()->from('posts')->where('type','=','2')->order_by('posts.id', 'DESC')->execute();
 
-//Check the device type
+        //Check the device type
         $mobileDevice = $this->detect_device();
 
 
@@ -117,10 +115,7 @@ class Controller_Post extends Controller_Temp {
 //Load the music posts 2
     public function action_music() {
         //load all post object from table that are electronic related
-        $postItems = ORM::factory('post')
-                ->where('type', '=', 3)
-                ->find();
-
+        $postItems = DB::select()->from('posts')->where('type','=','3')->order_by('posts.id', 'DESC')->execute();
         //Check the device type
         $mobileDevice = $this->detect_device();
 
@@ -153,9 +148,7 @@ class Controller_Post extends Controller_Temp {
 //Load the everythingelse posts 3
     public function action_everything_else() {
         //load all post object from table that are electronic related
-        $postItems = ORM::factory('post')
-                ->where('type', '=', 4)
-                ->find();
+        $postItems = DB::select()->from('posts')->where('type','=','4')->order_by('posts.id', 'DESC')->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
@@ -186,21 +179,20 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
-//Load the contact me page
+    //Load the contact me page
     public function action_contact() {
-
-//Load the page
+        //Load the page
         $this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
-David</a></center>";
+        David</a></center>";
     }
 
-//Detect the device type
+    //Detect the device type
     function detect_device() {
 
-//detect device
+        //detect device
         $browser = Request::user_agent('mobile');
 
-//If $browser is not null then device is mobile
+        //If $browser is not null then device is mobile
         if ($browser != null)
         {
             $mobileDevice = "Mobile :: ";
@@ -212,7 +204,6 @@ David</a></center>";
 
         return $mobileDevice;
     }
-
 }
 
 // End Post
