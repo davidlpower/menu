@@ -26,9 +26,9 @@ if ($post->type == null)
 <?php echo Form::textarea("content", $post->content, $settings = array("style='width: 80%; height: 400px'")); ?>
 <br/>
 <br/>
-<?php echo Form::label("category", "Category"); ?>
+<?php echo Form::label("type", "Type"); ?>
 
-<select id="category" name="category">
+<select id="type" name="type">
     <?php
     // print the groups available to the user here.
     foreach ($category as $id => $category) {
