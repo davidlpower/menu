@@ -37,7 +37,7 @@ class Controller_Admin extends Controller_Temp
                 ->from('posts')
                 ->execute();
         
-        exit($some_var);
+        exit(print_r($some_var));
         $array = array('Software','Electronics','Cooking');
         
         $aTitle = 'Edit or Post something new!';
