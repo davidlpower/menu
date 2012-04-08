@@ -13,7 +13,7 @@ class Controller_Post extends Controller_Temp {
 
         // load all post object from table that are software related
         $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->limit('2')->execute();
-        Blog::debugPrint($postItems);
+        
         //$postItems = DB::query(Database::SELECT, 'SELECT * FROM  `posts` ORDER BY  `posts`.`id` DESC LIMIT 2');
         
         //Check the device type
