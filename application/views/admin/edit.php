@@ -27,13 +27,13 @@ if ($post->type == null)
 <br/>
 <br/>
 <?php echo Form::label("type", "Type"); ?>
-
 <select id="type" name="type">
     <?php
     // print the groups available to the user here.
     foreach ($category as $id => $category) {
         echo '<option value="' . $id . '" ';
-        if(isset($current_type)) {
+        if (isset($current_type))
+        {
             if ($id == $current_type['type'])
             {
                 echo 'selected="selected"';
@@ -45,7 +45,10 @@ if ($post->type == null)
     }
     ?>
 </select>
-
+<input type="hidden" value="<?php echo date('Y-m-d H:i:s'); ?>" id="dateAdded" name="dateAdded">
+<label for="published" class="published-label">Published: </label>
+<input type="checkbox" value="1" id="published" name="published" checked>
+<
 <br/>
 <br/>
 <?php echo Form::submit("submit", "Submit"); ?>
