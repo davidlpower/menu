@@ -1,4 +1,0 @@
-AuthUserFile ../../.135_42
-AuthType Basic
-AuthName "Admin Login"
-Require valid-user
