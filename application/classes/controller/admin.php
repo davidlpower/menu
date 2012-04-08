@@ -9,7 +9,7 @@ class Controller_Admin extends Controller_Temp {
 
     public function action_index() {
         
-        $postItems = ORM::factory('post')->find_all(); // load all admin object from table
+        $postItems = DB::select()->from('posts')->order_by('id')->limit(2); // load all admin object from table
         //detect device
         $browser = Request::user_agent('mobile');
         
