@@ -145,10 +145,44 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
-//Load the everythingelse posts 3
-    public function action_everything_else() {
+    //Load the everythingelse posts 3
+    public function action_cooking() {
         //load all post object from table that are electronic related
         $postItems = DB::select()->from('posts')->where('type','=','4')->order_by('posts.id', 'DESC')->execute();
+
+        //Check the device type
+        $mobileDevice = $this->detect_device();
+
+
+        //If the site loaded something then
+        if ($postItems->count() > 0)
+        {
+            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            $mobileDevice = $mobileDevice . $aTitle;
+            View::bind_global('title', $aTitle);
+            View::bind_global('site_title', $mobileDevice);
+
+            $this->template->content = View::factory('post/index');
+
+            $this->template->content->postItems = $postItems;
+        }
+
+        //If no posts then display message
+        else
+        {
+            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            $mobileDevice = $mobileDevice . $aTitle;
+
+            View::bind_global('title', $aTitle);
+            View::bind_global('site_title', $mobileDevice);
+            $this->template->content = "<center>Nothing to see here.</center>";
+        }
+    }
+    
+    //Load the everythingelse posts 3
+    public function action_everything_else() {
+        //load all post object from table that are electronic related
+        $postItems = DB::select()->from('posts')->where('type','=','5')->order_by('posts.id', 'DESC')->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
