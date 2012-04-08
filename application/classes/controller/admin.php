@@ -32,15 +32,6 @@ class Controller_Admin extends Controller_Temp {
     // loads the new article form
     public function action_new() {
         $post = new Model_post();
-
-        $results = $post->all_posts();
-        foreach ($results as $post) {
-            
-            echo '> ';
-            print_r($post -> type);
-            echo '<br />';
-        }
-        die;
         
         $array = array('Software', 'Electronics', 'Cooking');
 
