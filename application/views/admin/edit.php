@@ -8,7 +8,7 @@
     });
 </script>
 
-<?php Blog::debugPrint($category['id'])
+<?php Blog::debugPrint($category->id)
         ?>
 
     <br/>
