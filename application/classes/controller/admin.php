@@ -48,10 +48,6 @@ class Controller_Admin extends Controller_Temp {
         $post = new Model_post($post_id);
         $post->values($_POST); // populate $post object from $_post array
         $post->save(); // saves post to database
-            
-        $result = $post->all_categories();
-        
-        $this->template->content->category = $result;
         
         $this->request->redirect('/admin'); // redirects to admin page after saving
     }
@@ -64,7 +60,10 @@ class Controller_Admin extends Controller_Temp {
         $aTitle = 'Edit that post!';
         View::bind_global('title', $aTitle);
         $this->template->content = View::factory('admin/edit');
-        $this->template->content->post = $post;
+        $this->template->content->post = $post;            
+        $result = $post->all_categories();
+        $this->template->content->category = $result;
+        
     }
 
     // delete the post item
