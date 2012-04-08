@@ -49,7 +49,10 @@ if ($post->type == null)
 <br/>
 <br/>
 <label for="published" class="published-label">Published: </label>
-<input type="checkbox" value="1" id="published" name="published" checked>
+<?php
+    Form::radio('Published', 1, '1');
+    Form::radio('Published', 0, '0');
+?>
 <br/>
 <br/>
 <?php echo Form::submit("submit", "Submit"); ?>
