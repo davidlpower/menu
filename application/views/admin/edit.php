@@ -45,7 +45,13 @@ if ($post->type == null)
     }
     ?>
 </select>
-<input type="hidden" value="<?php echo date('Y-m-d H:i:s') ?>" id="dateAdded" name="dateAdded">
+<?php 
+if(!isset($post->id)){
+    $code = '<?php echo date(\'Y-m-d H:i:s\') ?>';
+   echo '<input type="hidden" value="' . $code . '" id="dateAdded" name="dateAdded">';
+}
+?>
+
 <br/>
 <br/>
 <label for="published">Published: </label>
