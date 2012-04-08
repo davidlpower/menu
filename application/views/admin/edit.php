@@ -48,12 +48,12 @@ if ($post->type == null)
 <input type="hidden" value="<?php echo date('Y-m-d H:i:s') ?>" id="dateAdded" name="dateAdded">
 <br/>
 <br/>
-<label for="published" class="published-label">Published: </label>
+<label for="published">Published: </label>
 <?php
     echo 'Yes: ';
-    echo Form::radio('Published', 1);
+    echo Form::radio('published', 1);
     echo 'No: ';
-    echo Form::radio('Published', 0);
+    echo Form::radio('published', 0);
 ?>
 <br/>
 <br/>
