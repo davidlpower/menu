@@ -7,7 +7,7 @@
         theme_advanced_buttons3_add : "fullpage"
     });
 </script>
-<?php print_r($category); die; ?>
+
 <br/>
 <?php echo Form::open('admin/post/' . $post->id); ?>
 <?php echo Form::label("title", "Title"); ?>
