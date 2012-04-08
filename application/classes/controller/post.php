@@ -12,7 +12,7 @@ class Controller_Post extends Controller_Temp {
     public function action_index() {
 
         // load all post object from table that are software related
-        $postItems = DB::select()->from('posts')->order_by('id')->limit(2);        
+        $postItems = DB::select()->from('posts')->order_by('id')->limit(2)->execute();        
 
         //Check the device type
         $mobileDevice = $this->detect_device();
