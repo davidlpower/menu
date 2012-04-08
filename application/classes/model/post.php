@@ -12,10 +12,7 @@ class Model_Post extends ORM {
     public function all_categories(){
         
         $results = DB::select('id','category')->from('post_category')->execute();
-        
-        $results->as_array();
-        print_r($results);
-        die;
+
         return $results;
     }
 

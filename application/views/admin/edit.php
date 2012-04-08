@@ -28,7 +28,7 @@
     <br/>
     <br/>
     <?php echo Form::label("category", "Category"); ?>
-    <?php echo Form::select("category", $category->category); ?><br/>
+    <?php echo Form::select("category", $category['category']); ?><br/>
     <br/>
     <?php echo Form::submit("submit", "Submit"); ?>
     <?php echo Form::close(); ?>
