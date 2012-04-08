@@ -18,7 +18,8 @@ class Controller_Temp extends Controller_Template {
         if ($this->auto_render)
         {
             // Initialize empty values
-            $title = "Karujahundu";
+            $title = 'Software, Electronics, Music, Cooking and all-round Geekery';
+            
             $site_title = "Karujahundu";
             
             View::bind_global('title', $title);

@@ -21,9 +21,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -34,10 +32,8 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
 
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
@@ -55,9 +51,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -68,10 +62,10 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            
             $mobileDevice = $mobileDevice . $aTitle;
 
-            View::bind_global('title', $aTitle);
+            
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
@@ -90,11 +84,8 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
-
             $this->template->content = View::factory('post/index');
 
             $this->template->content->postItems = $postItems;
@@ -103,10 +94,8 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-
-            View::bind_global('title', $aTitle);
+            
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
@@ -123,9 +112,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -136,10 +123,8 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-
-            View::bind_global('title', $aTitle);
+            
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
@@ -157,9 +142,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -170,10 +153,8 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
 
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
@@ -191,9 +172,7 @@ class Controller_Post extends Controller_Temp {
         //If the site loaded something then
         if ($postItems->count() > 0)
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-            View::bind_global('title', $aTitle);
             View::bind_global('site_title', $mobileDevice);
 
             $this->template->content = View::factory('post/index');
@@ -204,10 +183,8 @@ class Controller_Post extends Controller_Temp {
         //If no posts then display message
         else
         {
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
             $mobileDevice = $mobileDevice . $aTitle;
-
-            View::bind_global('title', $aTitle);
+            
             View::bind_global('site_title', $mobileDevice);
             $this->template->content = "<center>Nothing to see here.</center>";
         }
