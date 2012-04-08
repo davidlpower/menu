@@ -16,7 +16,7 @@ class Model_Post extends ORM {
         $results = DB::select()->from('post_category')->execute();
         $array = array();
         foreach($results as $id => $category){
-            $array[$id] = $category;
+            $array[$category['id']] = $category['category'];
         }
         echo '<pre>';
         print_r($array);
