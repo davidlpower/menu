@@ -47,7 +47,7 @@ if ($post->type == null)
 </select>
 <?php 
 if(!isset($post->id)){
-    $code = "<input type=\"hidden\" value=\"echo date('Y-m-d H:i:s')\" id=\"dateAdded\" name=\"dateAdded\">";
+    $code = '<input type="hidden" value="echo date(\'Y-m-d H:i:s\')" id="dateAdded" name="dateAdded">';
    echo '<input type="hidden" value="' . eval($code) . '" id="dateAdded" name="dateAdded">';
 }
 ?>
