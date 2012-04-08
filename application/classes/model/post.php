@@ -26,7 +26,7 @@ class Model_Post extends ORM {
     public function get_type($id) {
 
         $results = DB::select('type')->from('posts')->where('id','=',$id)->execute()->current();
-        return $array;
+        return $results;
     }
 
 }
