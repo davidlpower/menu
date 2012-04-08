@@ -11,9 +11,9 @@
 <?php
 foreach ($category as $cat) {
     echo 'id: ';
-    echo $cat['id'];
+    echo $cat->id;
     echo ' Cat:';
-    echo $cat['category'];
+    echo $cat->category;
     die;
 }
 ?>
