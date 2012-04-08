@@ -24,7 +24,8 @@
 
             <?php echo $head ?>
             <?php echo $content ?>
-            <?php echo $foot ?>
+            
         </div>
+        <?php echo $foot ?>
     </body>  
 </html>
