@@ -25,5 +25,8 @@
     <?php echo Form::textarea("content", $post->content, $settings = array("style='width: 80%; height: 400px'")); ?>
     <br/>
     <br/>
+    <?php echo Form::label("category", "Category"); ?>
+    <?php echo Form::select("category", $post->category, $settings = array("style='width: 80%; height: 400px'")); ?><br/>
+    <br/>
     <?php echo Form::submit("submit", "Submit"); ?>
     <?php echo Form::close(); ?>

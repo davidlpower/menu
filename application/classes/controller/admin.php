@@ -14,10 +14,13 @@ class Controller_Admin extends Controller_Temp
         //http://kohanaframework.org/3.0/guide/api/Request - UserAgent Detection Here
 
         //If $browser is not null then device is mobile
-        if ($browser != null) {
-            $mobileDevice = "This is a mobile device";
-        } else {
-            $mobileDevice = "This is not a mobile device";
+        if ($browser != null) 
+        {
+            $mobileDevice = "Mobile Mode";
+        } 
+        else 
+        {
+            $mobileDevice = "Desktop Mode";
         }
         
         $aTitle = 'Software, Electronics, Music and all-round Geekery';
