@@ -145,7 +145,7 @@ class Controller_Post extends Controller_Temp {
         }
     }
 
-    //Load the everythingelse posts 3
+    //Load the everythingelse posts 4
     public function action_cooking() {
         //load all post object from table that are electronic related
         $postItems = DB::select()->from('posts')->where('type','=','4')->order_by('posts.id', 'DESC')->execute();
