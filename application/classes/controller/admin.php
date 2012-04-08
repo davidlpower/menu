@@ -50,7 +50,7 @@ class Controller_Admin extends Controller_Temp {
         $post->save(); // saves post to database
             
         $result = $post->all_categories();
-        view::bind_global('category',$result);
+        View::bind_global('category', $result);
         
         $this->request->redirect('/admin'); // redirects to admin page after saving
     }
