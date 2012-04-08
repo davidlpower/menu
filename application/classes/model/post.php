@@ -8,5 +8,11 @@ class Model_Post extends ORM {
         $results = DB::select()->from('posts')->as_object()->execute();
         return $results;
     }
+    
+    public function all_categories(){
+        
+        $results = DB::select()->from('post_category')->as_object()->execute();
+        return $results;
+    }
 
 }
