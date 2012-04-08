@@ -16,7 +16,8 @@
 if ($post->type == null)
 {
     Form::label("type", "Type");
-} Form::input("type", $post->type);
+    Form::input("type", $post->type);
+}
 ?>
 <?php echo Form::input("title", $post->title, $settings = array("style='height:35px; width: 80%; font-size: large;'")); ?>
 <br/>
