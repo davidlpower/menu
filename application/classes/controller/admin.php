@@ -34,7 +34,8 @@ class Controller_Admin extends Controller_Temp
     {
         $post = new Model_post();
         $some_var = DB::select()
-                ->from('posts');
+                ->from('posts')
+                ->execute();
         
         exit($some_var);
         $array = array('Software','Electronics','Cooking');
