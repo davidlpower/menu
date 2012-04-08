@@ -15,11 +15,17 @@ class Model_Post extends ORM {
 
         $results = DB::select()->from('post_category')->execute();
         $array = array();
-        
-        foreach($results as $id => $category){
+
+        foreach ($results as $id => $category) {
             $array[$category['id']] = $category['category'];
         }
 
+        return $array;
+    }
+
+    public function get_type($id) {
+
+        $results = DB::select('type')->from('post_category')->where('id','=',$id)->execute()->current();
         return $array;
     }
 

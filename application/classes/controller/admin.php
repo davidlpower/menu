@@ -62,7 +62,10 @@ class Controller_Admin extends Controller_Temp {
         $this->template->content = View::factory('admin/edit');
         $this->template->content->post = $post;            
         $result = $post->all_categories();
+        $type = $post->get_type($this->request->param('id'));
+        
         $this->template->content->category = $result;
+        $this->template->content->current_type = $type;
         
     }
 
