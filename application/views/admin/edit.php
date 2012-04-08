@@ -7,17 +7,7 @@
         theme_advanced_buttons3_add : "fullpage"
     });
 </script>
-
-<?php
-foreach ($category as $cat) {
-    echo 'id: ';
-    echo $cat->id;
-    echo ' Cat:';
-    echo $cat->category;
-    die;
-}
-?>
-
+<?php print_r($category) ?>
 <br/>
 <?php echo Form::open('admin/post/' . $post->id); ?>
 <?php echo Form::label("title", "Title"); ?>
@@ -36,7 +26,7 @@ if ($post->type == null)
 <br/>
 <br/>
 <?php echo Form::label("category", "Category"); ?>
-<?php echo Form::select("category", $category['category']); ?><br/>
+<?php echo Form::select("category", $category); ?><br/>
 <br/>
 <?php echo Form::submit("submit", "Submit"); ?>
 <?php echo Form::close(); ?>
