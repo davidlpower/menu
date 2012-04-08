@@ -37,7 +37,7 @@ class Controller_Admin extends Controller_Temp {
         foreach ($results as $post) {
             
             echo '> ';
-            print_r($post);
+            print_r($post -> category);
             echo '<br />';
         }
         die;
