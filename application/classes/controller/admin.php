@@ -48,7 +48,10 @@ class Controller_Admin extends Controller_Temp {
         $post = new Model_post($post_id);
         $post->values($_POST); // populate $post object from $_post array
         $post->save(); // saves post to database
-
+            
+        $result = $post->all_categories();
+        view::bind_global('category',$result);
+        
         $this->request->redirect('/admin'); // redirects to admin page after saving
     }
 
