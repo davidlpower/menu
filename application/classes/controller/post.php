@@ -46,9 +46,7 @@ class Controller_Post extends Controller_Temp {
     //Load the electronics posts
     public function action_software() {
         // load all post object from table that are electronic related
-        $postItems = ORM::factory('post')
-                ->where('type', '=', 1)
-                ->find();
+        $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
