@@ -27,7 +27,19 @@ if ($post->type == null)
 <br/>
 <br/>
 <?php echo Form::label("category", "Category"); ?>
-<?php echo Form::select("category", $category); ?>
+
+<select id="category" name="category">
+    <?php
+    // print the groups available to the user here.
+    foreach ($category as $id => $category) {
+        echo '<option value="' . $id . '" ';
+        echo ' >';
+        echo $category;
+        echo '</option>';
+    }
+    ?>
+</select>
+
 <br/>
 <br/>
 <?php echo Form::submit("submit", "Submit"); ?>
