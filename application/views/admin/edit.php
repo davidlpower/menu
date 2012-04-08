@@ -45,10 +45,11 @@ if ($post->type == null)
     }
     ?>
 </select>
-<input type="hidden" value="<?php echo date('Y-m-d H:i:s'); ?>" id="dateAdded" name="dateAdded">
+<input type="hidden" value="<?php echo date('Y-m-d H:i:s') ?>" id="dateAdded" name="dateAdded">
 <label for="published" class="published-label">Published: </label>
+<br/>
+<br/>
 <input type="checkbox" value="1" id="published" name="published" checked>
-<
 <br/>
 <br/>
 <?php echo Form::submit("submit", "Submit"); ?>
