@@ -14,6 +14,7 @@ class Model_Post extends ORM {
     public function all_categories() {
 
         $results = DB::select()->from('post_category')->as_object()->execute();
+        $results->as_array();
         return $results;
     }
 
