@@ -33,7 +33,7 @@ class Controller_Admin extends Controller_Temp {
     public function action_new() {
         $post = new Model_post();
 
-        $result = $post->all_posts();
+        $results = $post->all_posts();
         foreach ($results as $post) {
             
             echo '> ';
