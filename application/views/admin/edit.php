@@ -26,7 +26,7 @@ if ($post->type == null)
 <br/>
 <br/>
 <?php echo Form::label("category", "Category"); ?>
-<?php echo Form::select("category", $category['id'],$category['category']); ?>
+<?php echo Form::select("category", $category); ?>
 <br/>
 <br/>
 <?php echo Form::submit("submit", "Submit"); ?>
