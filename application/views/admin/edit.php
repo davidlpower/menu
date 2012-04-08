@@ -9,11 +9,13 @@
 </script>
 
 <?php
-echo 'id: ';
-echo$category['id'];
-echo ' Cat:';
-echo $category['category'];
-die;
+foreach ($category as $cat) {
+    echo 'id: ';
+    echo $cat['id'];
+    echo ' Cat:';
+    echo $cat['category'];
+    die;
+}
 ?>
 
 <br/>
