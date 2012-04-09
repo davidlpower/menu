@@ -10,5 +10,7 @@
         <?php echo HTML::anchor('cooking','Cooking') ?>
         <?php echo " | " ?>
         <?php echo HTML::anchor('everything_else','Everything Else') ?>
+        <?php echo " | " ?>
+        <?php echo HTML::anchor('contact','Say Hello') ?>
     </div>
 </div>
