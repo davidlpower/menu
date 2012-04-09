@@ -192,8 +192,12 @@ class Controller_Post extends Controller_Temp {
 
     //Load the contact me page
     public function action_contact() {
-        //Load the page
         
+        //Check device type
+        $mobileDevice = $this->detect_device();
+        View::bind_global('site_title', $mobileDevice);
+        
+        //Load the page
         $linkedIn = '<a href="http://ie.linkedin.com/pub/david-power/29/560/1a"> <img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View David Power\'s profile on LinkedIn"></a>';
         $this->template->content = "<center><br />Why not send me an e-mail, I'd love to hear from you. <br /><br /> e: <a href='mailto:david@karujahundu.com?Subject=contact'> David</a> | ". $linkedIn . "</center>";
     }
