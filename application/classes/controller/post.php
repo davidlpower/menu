@@ -193,7 +193,7 @@ class Controller_Post extends Controller_Temp {
     //Load the contact me page
     public function action_contact() {
         //Load the page
-        $this->template->content = "<center>e: <a href='mailto:david@karujahundu.com?Subject=contact'>
+        $this->template->content = "<center><br />Why not send me an e-mail, I'm I'd love to hear from you. e: <a href='mailto:david@karujahundu.com?Subject=contact'>
         David</a></center>";
     }
 
