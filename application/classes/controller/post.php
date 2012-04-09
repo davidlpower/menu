@@ -195,7 +195,7 @@ class Controller_Post extends Controller_Temp {
         //Load the page
         
         $linkedIn = '<a href="http://ie.linkedin.com/pub/david-power/29/560/1a"> <img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View David Power\'s profile on LinkedIn"></a>';
-        $this->template->content = "<center><br />Why not send me an e-mail, I'd love to hear from you. <br /><br /> e: <a href='mailto:david@karujahundu.com?Subject=contact'> David</a> " . $linkedIn . "</center>";
+        $this->template->content = "<center><br />Why not send me an e-mail, I'd love to hear from you. <br /><br /> e: <a href='mailto:david@karujahundu.com?Subject=contact'> David</a> \t". $linkedIn . "</center>";
     }
 
     //Detect the device type
