@@ -12,9 +12,13 @@ class Controller_Post extends Controller_Temp {
     public function action_index() {
 
         // load all post object from table that are software related
-        $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->limit('5')->execute();
+        $postItems = DB::select()
+                ->from('posts')
+                ->where('published', '=', '1')
+                ->order_by('posts.id', 'DESC')
+                ->limit('5')
+                ->execute();
 
-        //$postItems = DB::query(Database::SELECT, 'SELECT * FROM  `posts` ORDER BY  `posts`.`id` DESC LIMIT 2');
         //Check the device type
         $mobileDevice = $this->detect_device();
 
@@ -42,7 +46,12 @@ class Controller_Post extends Controller_Temp {
     //Load the electronics posts
     public function action_software() {
         // load all post object from table that are electronic related
-        $postItems = DB::select()->from('posts')->where('type','=','1')->order_by('posts.id', 'DESC')->execute();
+        $postItems = DB::select()
+                ->from('posts')
+                ->where('type','=','1')
+                ->and_where('published', '=', '1')
+                ->order_by('posts.id', 'DESC')
+                ->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
@@ -75,7 +84,12 @@ class Controller_Post extends Controller_Temp {
     public function action_electronics() {
 
         // load all post object from table that are electronic related
-        $postItems = DB::select()->from('posts')->where('type','=','2')->order_by('posts.id', 'DESC')->execute();
+        $postItems = DB::select()
+                ->from('posts')
+                ->where('type','=','2')
+                ->and_where('published', '=', '1')
+                ->order_by('posts.id', 'DESC')
+                ->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
@@ -104,7 +118,11 @@ class Controller_Post extends Controller_Temp {
 //Load the music posts 3
     public function action_music() {
         //load all post object from table that are electronic related
-        $postItems = DB::select()->from('posts')->where('type','=','3')->order_by('posts.id', 'DESC')->execute();
+        $postItems = DB::select()
+                ->from('posts')
+                ->where('type','=','3')
+                ->and_where('published', '=', '1')
+                ->order_by('posts.id', 'DESC')->execute();
         //Check the device type
         $mobileDevice = $this->detect_device();
 
@@ -133,7 +151,12 @@ class Controller_Post extends Controller_Temp {
     //Load the cooking posts 4
     public function action_cooking() {
         //load all post object from table that are electronic related
-        $postItems = DB::select()->from('posts')->where('type','=','4')->order_by('posts.id', 'DESC')->execute();
+        $postItems = DB::select()
+                ->from('posts')
+                ->where('type','=','4')
+                ->and_where('published', '=', '1')
+                ->order_by('posts.id', 'DESC')
+                ->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
@@ -163,7 +186,12 @@ class Controller_Post extends Controller_Temp {
     //Load the everythingelse posts 5
     public function action_everything_else() {
         //load all post object from table that are electronic related
-        $postItems = DB::select()->from('posts')->where('type','=','5')->order_by('posts.id', 'DESC')->execute();
+        $postItems = DB::select()
+                ->from('posts')
+                ->where('type','=','5')
+                ->and_where('published', '=', '1')
+                ->order_by('posts.id', 'DESC')
+                ->execute();
 
         //Check the device type
         $mobileDevice = $this->detect_device();
