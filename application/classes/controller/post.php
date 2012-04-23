@@ -226,8 +226,9 @@ class Controller_Post extends Controller_Temp {
         View::bind_global('site_title', $mobileDevice);
         
         //Load the page
+        $body = '<p><img style="float: left;" title="A photo of David Power" src="../media/images/me.png" alt="David Power" />Hello, my name is David Power and I\'m a UL, CIT, WIT graduate. I work as a web developer, primarly using PHP and in my spare time cook, bake, play music and make play with electronics.</p>';
         $linkedIn = '<a href="http://ie.linkedin.com/pub/david-power/29/560/1a"> <img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View David Power\'s profile on LinkedIn"></a>';
-        $this->template->content = "<center><br />Why not send me an e-mail, I'd love to hear from you. <br /><br /> e: <a href='mailto:david@karujahundu.com?Subject=contact'> David</a> | ". $linkedIn . "</center>";
+        $this->template->content = "$body.<center><br /><br /><br /> e: <a href='mailto:david@karujahundu.com?Subject=contact'> David</a> | ". $linkedIn . "</center>";
     }
 
     //Detect the device type
