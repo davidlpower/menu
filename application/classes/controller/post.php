@@ -226,7 +226,7 @@ class Controller_Post extends Controller_Temp {
         View::bind_global('site_title', $mobileDevice);
         
         //Load the page
-        $body = '<p><img style="float: left; padding-right: 15px;" title="A photo of David Power" src="../media/images/me.png" alt="David Power" />Hello, my name is David Power and I\'m a UL, CIT, WIT graduate. I work as a Web Developer, primarly using PHP and in my spare time I cook, bake, play music and make experiment with electronics.</p>';
+        $body = '<p><img style="float: left; padding-right: 15px;" title="A photo of David Power" src="../media/images/me.png" alt="David Power" />Hello, my name is David Power and I\'m a UL, CIT, WIT graduate. I work as a Web Developer, primarly using PHP and in my spare time I cook, bake, play music and experiment with electronics.</p>';
         $linkedIn = '<a href="http://ie.linkedin.com/pub/david-power/29/560/1a"> <img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View David Power\'s profile on LinkedIn"></a>';
         $this->template->content = "<div class=\"menuItem\"><p>$body If you would like to get in contact please send me an e-mail. </p><p><center>e: <a href='mailto:david@karujahundu.com?Subject=contact'> David</a> | ". $linkedIn . "</p></center></div>";
     }
