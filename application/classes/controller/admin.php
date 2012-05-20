@@ -83,8 +83,19 @@ class Controller_Admin extends Controller_Temp {
     
     // Display shell script
     public function action_display_shell(){
-        $output = exec('server_check.sh');
-        echo $output; 
+        
+        $output = exec('/home/david/server/server_check.sh');
+        
+        if($output == 'down"')
+        {
+            $status = 'down';
+        }
+        else
+        {
+            $status = 'up';
+        }
+        
+        echo 'The server is '.$status; 
     }
 }
 
