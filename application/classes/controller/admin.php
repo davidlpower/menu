@@ -80,7 +80,12 @@ class Controller_Admin extends Controller_Temp {
         $post->delete(); // delete in database
         $this->request->redirect(self::INDEX_PAGE);
     }
-
+    
+    // Display shell script
+    public function action_display_shell(){
+        $output = exec('server_check.sh');
+        echo $output; 
+    }
 }
 
 // End post
