@@ -17,7 +17,7 @@ class Controller_Temp extends Controller_Template {
 
         if ($this->auto_render)
         {
-            print_r(Router::$controller);
+            print_r(Request::$current->controller());
             die;
             $is_logged_in = Auth::instance()->logged_in();
 
