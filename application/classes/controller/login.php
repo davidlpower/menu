@@ -10,7 +10,7 @@ class Controller_Login extends Controller_Temp {
 
         $post = $this->request->post();
 
-        if (is_array($post) AND !is_null($post))
+        if (!empty($post))
         {
             $this->action_login($post['username'], $post['passwrod']);
 
@@ -19,10 +19,10 @@ class Controller_Login extends Controller_Temp {
                 //redirect user
                 $this->request->redirect('/admin');
             }
-            else
-            {
-                $this->template->content = View::factory('login/index');
-            }
+        }
+        else
+        {
+            $this->template->content = View::factory('login/index');
         }
     }
 
