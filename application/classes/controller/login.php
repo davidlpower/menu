@@ -10,7 +10,7 @@ class Controller_Login extends Controller_Temp {
 
         $post = $this->request->post();
 
-        if (!is_null($post['username']))
+        if (is_array($post) AND !is_null($post))
         {
             $this->action_login($post['username'], $post['passwrod']);
 
