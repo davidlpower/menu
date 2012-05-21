@@ -12,10 +12,10 @@ class Controller_Admin extends Controller_Temp {
 
         $model = ORM::factory('user');
         $model->values(array(
-            'username' => 'test',
-            'email' => 'test@example.com',
-            'password' => 'test1',
-            'password_confirm' => 'test1',
+            'username' => 'david',
+            'email' => 'david@karujahundu.com',
+            'password' => 'Karu!951',
+            'password_confirm' => 'Karu!951',
         ));
         $model->save();
 
@@ -25,9 +25,10 @@ class Controller_Admin extends Controller_Temp {
         $username = 'test';
         $password = 'test1';
 
+        Auth::instance()->logout();
         Auth::instance()->login($username, $password);
 
-        $is_logged_in = Auth::instance()->logged_in;
+        $is_logged_in = Auth::instance()->logged_in();
 
         if ($is_logged_in)
         {
