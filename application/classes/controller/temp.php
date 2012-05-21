@@ -17,11 +17,9 @@ class Controller_Temp extends Controller_Template {
 
         if ($this->auto_render)
         {
-            print_r(Request::$current->controller());
-            die;
             $is_logged_in = Auth::instance()->logged_in();
 
-            if ($is_logged_in AND (Router::$controller != 'admin'))
+            if ($is_logged_in AND (Request::$current->controller() != 'admin'))
             {
                 // Initialize empty values
                 $title = 'Software, Electronics, Music, Cooking and all-round Geekery';
