@@ -10,92 +10,147 @@ class Controller_Admin extends Controller_Temp {
 
     public function action_index() {
 
-        // load all admin object from table
-        $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->execute();
+        $is_logged_in = Auth::instance()->logged_in();
 
-        //detect device
-        $browser = Request::user_agent('mobile');
-
-        if ($browser != null)
+        if ($is_logged_in)
         {
-            $mobileDevice = "Mobile Mode";
+            // load all admin object from table
+            $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->execute();
+
+            //detect device
+            $browser = Request::user_agent('mobile');
+
+            if ($browser != null)
+            {
+                $mobileDevice = "Mobile Mode";
+            }
+            else
+            {
+                $mobileDevice = "Desktop Mode";
+            }
+
+            $aTitle = 'Software, Electronics, Music and all-round Geekery';
+            View::bind_global('title', $aTitle);
+            $this->template->content = View::factory('admin/index');
+            $this->template->content->postItems = $postItems;
         }
         else
         {
-            $mobileDevice = "Desktop Mode";
+            //redirect user
+            $this->request->redirect('/login');
         }
-
-        $aTitle = 'Software, Electronics, Music and all-round Geekery';
-        View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('admin/index');
-        $this->template->content->postItems = $postItems;
     }
 
     // loads the new article form
     public function action_new() {
+        $is_logged_in = Auth::instance()->logged_in();
 
-        $post = new Model_post();
-        $categories = $post->all_categories();
+        if ($is_logged_in)
+        {
+            $post = new Model_post();
+            $categories = $post->all_categories();
 
-        $aTitle = 'Edit or Post something new!';
-        View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('admin/edit');
-        $this->template->content->post = $post;
-        $this->template->content->category = $categories;
+            $aTitle = 'Edit or Post something new!';
+            View::bind_global('title', $aTitle);
+            $this->template->content = View::factory('admin/edit');
+            $this->template->content->post = $post;
+            $this->template->content->category = $categories;
+        }
+        else
+        {
+            $this->request->redirect('/login');
+        }
     }
 
     // save the article
     public function action_post() {
+        $is_logged_in = Auth::instance()->logged_in();
 
-        $post_id = $this->request->param('id');
-        $post = new Model_post($post_id);
-        $post->values($_POST); // populate $post object from $_post array
-        $post->save(); // saves post to database
+        if ($is_logged_in)
+        {
+            $post_id = $this->request->param('id');
+            $post = new Model_post($post_id);
+            $post->values($_POST); // populate $post object from $_post array
+            $post->save(); // saves post to database
 
-        $this->request->redirect('/admin'); // redirects to admin page after saving
+            $this->request->redirect('/admin'); // redirects to admin page after saving
+        }
+        else
+        {
+            $this->request->redirect('/login');
+        }
     }
 
     // edit the admin items
     public function action_edit() {
+        $is_logged_in = Auth::instance()->logged_in();
 
-        $post_id = $this->request->param('id');
-        $post = new Model_post($post_id);
-        $aTitle = 'Edit that post!';
-        View::bind_global('title', $aTitle);
-        $this->template->content = View::factory('admin/edit');
-        $this->template->content->post = $post;
-        $result = $post->all_categories();
-        $type = $post->get_type($this->request->param('id'));
+        if ($is_logged_in)
+        {
+            $post_id = $this->request->param('id');
+            $post = new Model_post($post_id);
+            $aTitle = 'Edit that post!';
+            View::bind_global('title', $aTitle);
+            $this->template->content = View::factory('admin/edit');
+            $this->template->content->post = $post;
+            $result = $post->all_categories();
+            $type = $post->get_type($this->request->param('id'));
 
-        $this->template->content->category = $result;
-        $this->template->content->current_type = $type;
+            $this->template->content->category = $result;
+            $this->template->content->current_type = $type;
+        }
+        else
+        {
+            ////redirect user
+            $this->request->redirect('/login');
+        }
     }
 
     // delete the post item
     public function action_delete() {
 
-        $post_id = $this->request->param('id');
-        $post = new Model_post($post_id);
+        $is_logged_in = Auth::instance()->logged_in();
 
-        $post->delete(); // delete in database
-        $this->request->redirect(self::INDEX_PAGE);
+        if ($is_logged_in)
+        {
+            $post_id = $this->request->param('id');
+            $post = new Model_post($post_id);
+
+            $post->delete(); // delete in database
+            $this->request->redirect(self::INDEX_PAGE);
+        }
+        else
+        {
+            ////redirect user
+            $this->request->redirect('/login');
+        }
     }
 
     // Display shell script
     public function action_display_shell() {
 
-        $output = exec('/home/david/server/server_check.sh');
+        $is_logged_in = Auth::instance()->logged_in();
 
-        if ($output == 'down"')
+        if ($is_logged_in)
         {
-            $status = 'down';
+            $output = exec('/home/david/server/server_check.sh');
+
+            if ($output == 'down"')
+            {
+                $status = 'down';
+            }
+            else
+            {
+                $status = 'up';
+            }
+
+            echo 'The server is ' . $status;
         }
         else
         {
-            $status = 'up';
+            //redirect user
+            $this->request->redirect('/login');
         }
-
-        echo 'The server is ' . $status;
     }
 
     // Log out
