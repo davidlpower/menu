@@ -11,7 +11,7 @@ class Controller_Login extends Controller_Temp {
         $post = $this->request->post();
         print_r($post);
         die;
-        if (isset($post))
+        if (!is_null($post))
         {
             $this->action_login($post['username'], $post['passwrod']);
 
