@@ -122,6 +122,11 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
         ));
 */
 
+Route::set('login', 'login(/<action>)')
+	->defaults(array(
+		'controller' => 'login',
+	));
+
 Route::set('adminid', 'admin(/<action>(/<id>))')
 	->defaults(array(
 		'controller' => 'admin',

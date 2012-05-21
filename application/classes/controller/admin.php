@@ -37,7 +37,7 @@ class Controller_Admin extends Controller_Temp {
         else
         {
             //redirect user
-            $this->request->redirect('login');
+            $this->request->redirect('/login');
         }
     }
 
