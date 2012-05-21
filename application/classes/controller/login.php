@@ -31,11 +31,11 @@ class Controller_Login extends Controller_Temp {
         $is_logged_in = Auth::instance()->logged_in();
         if ($is_logged_in)
         {
-            return TRUE;
+            return 'true';
         }
         else
         {
-            return FALSE;
+            return 'false';
         }
     }
 
@@ -48,11 +48,11 @@ class Controller_Login extends Controller_Temp {
 
         if ($is_logged_in)
         {
-            return TRUE;
+            return 'true';
         }
         else
         {
-            return FALSE;
+            return 'false';
         }
     }
 
