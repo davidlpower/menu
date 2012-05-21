@@ -14,5 +14,13 @@
         <?php echo HTML::anchor('admin/everything_else','Everything Else') ?>
         <?php echo " | " ?>
         <?php echo HTML::anchor('contact','Say Hello') ?>
+        <?php 
+        if(Auth::instance()->logged_in())
+        {
+            echo " | ";
+            echo HTML::anchor('admin/logout','Logout');
+        }
+        ?>
+
     </div>
 </div>

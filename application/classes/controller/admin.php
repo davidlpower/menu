@@ -109,6 +109,12 @@ class Controller_Admin extends Controller_Temp {
 
         echo 'The server is ' . $status;
     }
+    
+        // Log out
+    public function action_logout() {
+        Auth::instance()->logout();
+        $this->request->redirect('/login');
+    }
 
 }
 

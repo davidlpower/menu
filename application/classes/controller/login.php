@@ -55,12 +55,6 @@ class Controller_Login extends Controller_Temp {
         }
     }
 
-    // Log out
-    public function action_logout() {
-
-        Auth::instance()->logout();
-    }
-
 }
 
 // End post
