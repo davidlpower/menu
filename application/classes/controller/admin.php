@@ -36,8 +36,6 @@ class Controller_Admin extends Controller_Temp {
         }
         else
         {
-            echo 'You got to the admin controller but you are not logged in.';
-            die;
             //redirect user
             $this->request->redirect('/login');
         }
