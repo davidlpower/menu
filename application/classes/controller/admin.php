@@ -10,24 +10,6 @@ class Controller_Admin extends Controller_Temp {
 
     public function action_index() {
 
-        $model = ORM::factory('user');
-        $model->values(array(
-            'username' => 'david',
-            'email' => 'david@karujahundu.com',
-            'password' => 'Karu!951',
-            'password_confirm' => 'Karu!951',
-        ));
-        $model->save();
-
-        $model->add('roles', ORM::factory('role')->where('name', '=', 'login')->find());
-        $model->add('roles', ORM::factory('role')->where('name', '=', 'admin')->find());
-
-        $username = 'test';
-        $password = 'test1';
-
-        Auth::instance()->logout();
-        Auth::instance()->login($username, $password);
-
         $is_logged_in = Auth::instance()->logged_in();
 
         if ($is_logged_in)
@@ -55,7 +37,7 @@ class Controller_Admin extends Controller_Temp {
         else
         {
             //redirect user
-            $this->request->redirect('/');
+            $this->request->redirect('/login');
         }
     }
 
