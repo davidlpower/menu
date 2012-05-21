@@ -17,24 +17,37 @@ class Controller_Temp extends Controller_Template {
 
         if ($this->auto_render)
         {
-            // Initialize empty values
-            $title = 'Software, Electronics, Music, Cooking and all-round Geekery';
-            
-            $site_title = "Karujahundu";
-            
-            View::bind_global('title', $title);
-            View::bind_global('site_title', $site_title);
-            
-            $this->template->head = view::factory('template/head');
-            if($this->request->controller() === 'admin'){
-                $this->template->head->menu = view::factory('template/menuBarAdmin');
-            }else{
-               $this->template->head->menu = view::factory('template/menuBar'); 
-            } 
-            
-            $this->template->content = '';
-            $this->template->foot = view::factory('template/foot');
-            $this->template->styles = array();
+            $is_logged_in = Auth::instance()->logged_in();
+
+            if ($is_logged_in AND (Router::$controller == 'admin'))
+            {
+                // Initialize empty values
+                $title = 'Software, Electronics, Music, Cooking and all-round Geekery';
+
+                $site_title = "Karujahundu";
+
+                View::bind_global('title', $title);
+                View::bind_global('site_title', $site_title);
+
+                $this->template->head = view::factory('template/head');
+                if ($this->request->controller() === 'admin')
+                {
+                    $this->template->head->menu = view::factory('template/menuBarAdmin');
+                }
+                else
+                {
+                    $this->template->head->menu = view::factory('template/menuBar');
+                }
+
+                $this->template->content = '';
+                $this->template->foot = view::factory('template/foot');
+                $this->template->styles = array();
+            }
+            else
+            {
+                //redirect user
+                $this->request->redirect('/login');
+            }
         }
     }
 

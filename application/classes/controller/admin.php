@@ -10,35 +10,25 @@ class Controller_Admin extends Controller_Temp {
 
     public function action_index() {
 
-        $is_logged_in = Auth::instance()->logged_in();
+        // load all admin object from table
+        $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->execute();
 
-        if ($is_logged_in)
+        //detect device
+        $browser = Request::user_agent('mobile');
+
+        if ($browser != null)
         {
-            // load all admin object from table
-            $postItems = DB::select()->from('posts')->order_by('posts.id', 'DESC')->execute();
-
-            //detect device
-            $browser = Request::user_agent('mobile');
-
-            if ($browser != null)
-            {
-                $mobileDevice = "Mobile Mode";
-            }
-            else
-            {
-                $mobileDevice = "Desktop Mode";
-            }
-
-            $aTitle = 'Software, Electronics, Music and all-round Geekery';
-            View::bind_global('title', $aTitle);
-            $this->template->content = View::factory('admin/index');
-            $this->template->content->postItems = $postItems;
+            $mobileDevice = "Mobile Mode";
         }
         else
         {
-            //redirect user
-            $this->request->redirect('/login');
+            $mobileDevice = "Desktop Mode";
         }
+
+        $aTitle = 'Software, Electronics, Music and all-round Geekery';
+        View::bind_global('title', $aTitle);
+        $this->template->content = View::factory('admin/index');
+        $this->template->content->postItems = $postItems;
     }
 
     // loads the new article form
@@ -107,8 +97,8 @@ class Controller_Admin extends Controller_Temp {
 
         echo 'The server is ' . $status;
     }
-    
-        // Log out
+
+    // Log out
     public function action_logout() {
         Auth::instance()->logout();
         $this->request->redirect('/login');
