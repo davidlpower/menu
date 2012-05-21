@@ -15,7 +15,7 @@ class Controller_Login extends Controller_Temp {
         }
         else
         {
-            $this->template->content = View::factory('login/login');
+            $this->template->content = View::factory('login/index');
         }
     }
     
