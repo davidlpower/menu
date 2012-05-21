@@ -8,18 +8,24 @@ class Controller_Login extends Controller_Temp {
 
     public function action_index() {
 
-        if ($this->action_check_login())
+        $post = $this->request->post();
+        if ($post)
         {
-            //redirect user
-            $this->request->redirect('/admin');
-        }
-        else
-        {
-            $this->template->content = View::factory('login/index');
+            $this->action_login($post['username'], $post['passwrod']);
+
+            if ($this->action_check_login())
+            {
+                //redirect user
+                $this->request->redirect('/admin');
+            }
+            else
+            {
+                $this->template->content = View::factory('login/index');
+            }
         }
     }
-    
-    public function action_check_login(){
+
+    public function action_check_login() {
         $is_logged_in = Auth::instance()->logged_in();
         if ($is_logged_in)
         {
@@ -30,13 +36,14 @@ class Controller_Login extends Controller_Temp {
             return FALSE;
         }
     }
+
     // Log in
     public function action_login($user, $pass) {
 
         Auth::instance()->login($user, $pass);
-        
+
         $is_logged_in = Auth::instance()->logged_in();
-        
+
         if ($is_logged_in)
         {
             return TRUE;
