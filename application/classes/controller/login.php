@@ -8,7 +8,7 @@ class Controller_Login extends Controller_Temp {
 
     public function action_index() {
 
-        if (check_login())
+        if ($this->action_check_login())
         {
             //redirect user
             $this->request->redirect('/admin');
