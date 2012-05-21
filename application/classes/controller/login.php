@@ -9,8 +9,7 @@ class Controller_Login extends Controller_Temp {
     public function action_index() {
 
         $post = $this->request->post();
-        print_r($post);
-        die;
+
         if (!is_null($post))
         {
             $this->action_login($post['username'], $post['passwrod']);
