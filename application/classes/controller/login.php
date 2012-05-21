@@ -31,7 +31,7 @@ class Controller_Login extends Controller_Temp {
         }
     }
     // Log in
-    public function action_post($user, $pass) {
+    public function action_login($user, $pass) {
 
         Auth::instance()->login($user, $pass);
         
