@@ -12,8 +12,9 @@ class Controller_Login extends Controller_Temp {
 
         if (!empty($post))
         {
-            $this->action_login($post['username'], $post['password']);
-
+            $test = $this->action_login($post['username'], $post['password']);
+            echo 'Yeah? ' . $test;
+            die;
             if ($this->action_check_login())
             {
                 //redirect user
