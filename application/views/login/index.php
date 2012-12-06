@@ -1,12 +1,9 @@
-<div id ="login">
-    <?php echo Form::open('login/'); ?>
-
-    <?php echo Form::label("username", "Username"); ?>
-    <?php echo Form::input("username"); ?>
-    <br />
-    <?php echo Form::label("password", "Password"); ?>
-    <?php echo Form::password("password"); ?>
-    <br/>
-    <?php echo Form::submit("submit", "Login"); ?>
-    <?php echo Form::close(); ?>
+<div id="login">
+    <form action="/login" method="post" accept-charset="utf-8">
+        <div id="">
+            <span id="">Username <input type="text" name="username"><span
+            <span id="">Password <input type="password" name="password"></span>
+            <input type="submit" name="submit" value="Login">    
+        </div>
+    </form>
 </div>
